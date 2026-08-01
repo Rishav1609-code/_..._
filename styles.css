@@ -1113,10 +1113,24 @@ p {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.key-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-brown-dark);
+}
+
+.key-card p {
+    margin: 0;
 }
 
 .key-card.visible {
@@ -1932,16 +1946,24 @@ p {
     left: -20px;
     right: -20px;
     bottom: -16px;
-    background: rgba(255, 255, 255, 0.85); /* Increased opacity to hide text */
-    backdrop-filter: blur(24px); /* Stronger frosted glass blur */
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.90); 
+    backdrop-filter: blur(40px); 
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
+}
+
+.coming-soon-wrapper p,
+.coming-soon-wrapper .btn {
+    filter: blur(10px);
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
 }
 
 .coming-soon-text {
