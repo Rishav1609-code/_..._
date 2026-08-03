@@ -151,13 +151,13 @@
             <div class="container">
                 <div class="section-header">
                     <div class="section-header-left">
-                        <h2 class="reveal">Strategic. Agile. <br/><span class="span-gradient">Built for Growth.</span></h2>
+                        <h2 class="reveal">Secure. Scalable.<br/><span class="span-gradient">Engineered for Impact.</span></h2>
                     </div>
                     <div class="section-header-right">
-                        <p class="reveal reveal-delay-1">We've built and scaled businesses ourselves — our approach is grounded in real-world operational experience.</p>
+                        <p class="reveal reveal-delay-1">We build high-performance digital ecosystems—our approach seamlessly bridges cutting-edge tech innovation with practical, everyday business operations.</p>
                         <div class="reveal reveal-delay-2">
                             <a href="#about" class="btn btn-dark">
-                                <span>Discover More</span>
+                                <span>Discover Our Technology</span>
                                 <span class="icon-arrow-dynamic">
                                 <span class="arrow-current">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
@@ -179,25 +179,71 @@
                 <div class="values-list">
                     <div class="value-item reveal">
                         <div class="value-number">01</div>
-                        <div class="value-text">Deep operational expertise across diverse industries</div>
+                        <div class="value-text"><b>Security-First Architecture</b> We embed advanced threat scanning, robust data protection, and strict privacy protocols directly into the foundation of every application we engineer.</div>
                     </div>
                     <div class="value-item reveal reveal-delay-1">
                         <div class="value-number">02</div>
-                        <div class="value-text">A partner beyond just capital — strategic guidance at every step</div>
+                        <div class="value-text"><b>End-to-End Digital Engineering</b> We go beyond simple design—delivering full-scale custom web development, high-performance database management, and optimized user experiences tailored to your business needs.</div>
                     </div>
                     <div class="value-item reveal reveal-delay-2">
                         <div class="value-number">03</div>
-                        <div class="value-text">Resilient and adaptive in the face of diverse market challenges</div>
+                        <div class="value-text"><b>Real-World Operational Excellence</b> We focus entirely on solving practical operational bottlenecks, translating complex digital code into streamlined, user-friendly solutions that drive business efficiency.</div>
                     </div>
                     <div class="value-item reveal reveal-delay-3">
                         <div class="value-number">04</div>
-                        <div class="value-text">A foundation built on transparency, trust, and long-term vision</div>
+                        <div class="value-text"><b>Uncompromising Trust & Verification</b> Our ecosystem is built on transparency and safety, utilizing strict blue-tick authentication and secure verification models to establish absolute user confidence.</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CTA SECTION ===== -->
+        <!-- ===== METHODOLOGY SECTION ===== -->
+<section class="section-methodology">
+    <div class="container">
+        <div class="methodology-grid">
+            <div class="methodology-title-col">
+                <h2 class="reveal">The vXr Methodology</h2>
+                <div class="methodology-divider reveal reveal-delay-1"></div>
+            </div>
+            <div class="methodology-text-col reveal reveal-delay-1">
+                <p><strong>How We Work</strong></p>
+                <p>"We do not just build software; we architect business solutions. Our approach begins by thoroughly analyzing the physical operational challenges our clients face—whether it is managing high-volume custom orders, handling massive digital files securely, or streamlining bulk B2B logistics. We then engineer customized, zero-latency digital infrastructures that eliminate bottlenecks, automate manual workflows, and scale revenue effortlessly."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STANDARDS SECTION ===== -->
+<section class="section-standards">
+    <div class="container">
+        <h2 class="standards-title reveal">Built on Uncompromising Standards</h2>
+        <div class="standards-grid">
+            <div class="standard-card reveal">
+                <div class="standard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>Innovative Simplicity</h3>
+                <p>Complex code behind the scenes, seamless and effortless usability on the front end.</p>
+            </div>
+            <div class="standard-card reveal reveal-delay-1">
+                <div class="standard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3>Data Integrity</h3>
+                <p>Enterprise-grade encryption ensuring user and client information remains completely uncompromised.</p>
+            </div>
+            <div class="standard-card reveal reveal-delay-2">
+                <div class="standard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <h3>Future-Proof Design</h3>
+                <p>Building highly scalable web frameworks that grow effortlessly alongside our clients' expanding market presence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
         <section class="section-cta" id="contact">
             <div class="cta-bg">
                 <img src="images/vXr_lets-connect.jpeg" alt="City skyline"/>
@@ -340,6 +386,18 @@
             }, 800);
         });
 
+
+        // Dynamic Active Nav Link
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.navbar-links .nav-link, .mobile-menu .nav-link-mobile').forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        });
                 // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         let lastScroll = 0;
@@ -365,26 +423,6 @@
             }
 
             lastScroll = scrollY;
-        });
-
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 200;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href').replace('#', '');
-                if (href === current || (current === 'hero' && href === 'top')) {
-                    link.classList.add('active');
-                }
-            });
         });
 
         // Mobile menu
@@ -569,5 +607,6 @@
 
         requestAnimationFrame(raf)
     </script>
+    <script src="404-redirect.js"></script>
 </body>
 </html>
