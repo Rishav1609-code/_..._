@@ -206,7 +206,7 @@ p {
 
 .btn-outline:hover {
     background: var(--color-brown);
-    color: var(--color-cream);
+    color: var(--color-cream) !important;
 }
 
 .btn .icon-arrow {
