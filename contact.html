@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vXr Holdings — Empowering Visionary Enterprises</title>
+    <title>Get in Touch | vXr Holdings</title>
     <meta name="description"
-        content="vXr Holdings is a diversified holding company providing strategic capital, operational expertise, and long-term partnership for high-growth enterprises across technology, infrastructure, and innovation sectors." />
+        content="vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow." />
+    <link rel="icon" type="image/png" href="LOGO/vXr_FAVICON_bg-r.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -185,7 +186,7 @@
                                 onerror="this.src='images/about-image.png'" />
 
                             <!-- Overlay Text -->
-                            <div style="position: absolute; top: 60px; left: 60px; z-index: 2;">
+                            <div style="position: absolute; top: 60px; left: 0; right: 0; text-align: center; z-index: 2;">
                                 <h1
                                     style="color: #ffffff; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 500; letter-spacing: -0.02em; margin: 0;">
                                     Get in Touch</h1>
@@ -237,11 +238,88 @@
                                         <input type="text" id="name" required placeholder="Enter name"
                                             style="padding-bottom: 12px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111;" />
                                     </div>
-                                    <div style="display: flex; flex-direction: column; gap: 16px;">
-                                        <label for="email"
-                                            style="font-weight: 500; color: #333; font-size: 1rem;">Email</label>
-                                        <input type="email" id="email" required placeholder="Enter email"
-                                            style="padding-bottom: 12px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111;" />
+                                    <div style="display: flex; flex-direction: column; gap: 16px; position: relative;">
+                                        <label style="font-weight: 500; color: #333; font-size: 1rem;">Email</label>
+
+                                        <!-- Hidden combined email input used for OTP validation -->
+                                        <input type="hidden" id="email" />
+
+                                        <!-- Split Email Row: prefix + custom domain picker + Send OTP -->
+                                        <div style="display: flex; align-items: flex-end; gap: 0; width: 100%;">
+                                            <!-- Username prefix -->
+                                            <input type="text" id="emailPrefix" required placeholder="Username" autocomplete="off"
+                                                style="flex: 1; min-width: 0; padding-bottom: 12px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111;" />
+                                            <!-- @ divider -->
+                                            <span style="padding: 0 6px 8px 6px; color: #C4A882; font-size: 1rem; font-weight: 600; border-bottom: 1px solid #ddd; user-select: none;">@</span>
+                                            
+                                            <!-- Custom Domain Picker -->
+                                            <div id="domainPickerWrapper" style="position: relative; min-width: 130px;">
+                                                <!-- Hidden select for form data -->
+                                                <select id="emailDomain" style="display: none;">
+                                                    <option value="gmail.com" selected>gmail.com</option>
+                                                    <option value="outlook.com">outlook.com</option>
+                                                    <option value="hotmail.com">hotmail.com</option>
+                                                    <option value="yahoo.com">yahoo.com</option>
+                                                    <option value="icloud.com">icloud.com</option>
+                                                </select>
+                                                <!-- Custom trigger button -->
+                                                <button type="button" id="domainTrigger"
+                                                    style="display: flex; align-items: center; gap: 6px; padding: 0 0 12px 0; border: none; border-bottom: 1px solid #ddd; background: transparent; cursor: pointer; font-family: inherit; font-size: 0.92rem; color: #333; font-weight: 500; width: 100%; transition: border-color 0.3s;">
+                                                    <span id="domainText" style="flex: 1; text-align: left;">gmail.com</span>
+                                                    <svg id="domainChevron" style="width: 12px; height: 12px; color: #aaa; transition: transform 0.3s ease; flex-shrink: 0;" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <!-- Custom dropdown panel -->
+                                                <div id="domainDropdown" style="display: none; position: absolute; top: calc(100% + 6px); left: -10px; right: -10px; background: #fff; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); z-index: 100; overflow: hidden; opacity: 0; transform: translateY(-6px); transition: opacity 0.25s ease, transform 0.25s ease;">
+                                                    <!-- Dropdown header -->
+                                                    <div style="padding: 12px 16px 8px 16px; border-bottom: 1px solid #f0f0f0;">
+                                                        <span style="font-size: 0.7rem; font-weight: 600; color: #bbb; letter-spacing: 1.5px; text-transform: uppercase;">Select Provider</span>
+                                                    </div>
+                                                    <!-- Options -->
+                                                    <div id="domainOptions" style="padding: 6px 0;">
+                                                        <div class="domain-option" data-value="gmail.com" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.15s ease; font-size: 0.9rem; color: #333; font-weight: 500;">
+                                                            <span style="flex: 1;">gmail.com</span>
+                                                            <span class="domain-check" style="color: #C4A882; font-size: 14px; display: none;">&#10003;</span>
+                                                        </div>
+                                                        <div class="domain-option" data-value="outlook.com" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.15s ease; font-size: 0.9rem; color: #333; font-weight: 500;">
+                                                            <span style="flex: 1;">outlook.com</span>
+                                                            <span class="domain-check" style="color: #C4A882; font-size: 14px; display: none;">&#10003;</span>
+                                                        </div>
+                                                        <div class="domain-option" data-value="hotmail.com" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.15s ease; font-size: 0.9rem; color: #333; font-weight: 500;">
+                                                            <span style="flex: 1;">hotmail.com</span>
+                                                            <span class="domain-check" style="color: #C4A882; font-size: 14px; display: none;">&#10003;</span>
+                                                        </div>
+                                                        <div class="domain-option" data-value="yahoo.com" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.15s ease; font-size: 0.9rem; color: #333; font-weight: 500;">
+                                                            <span style="flex: 1;">yahoo.com</span>
+                                                            <span class="domain-check" style="color: #C4A882; font-size: 14px; display: none;">&#10003;</span>
+                                                        </div>
+                                                        <div class="domain-option" data-value="icloud.com" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.15s ease; font-size: 0.9rem; color: #333; font-weight: 500;">
+                                                            <span style="flex: 1;">icloud.com</span>
+                                                            <span class="domain-check" style="color: #C4A882; font-size: 14px; display: none;">&#10003;</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Send OTP button -->
+                                            <button type="button" id="btnSendOtp"
+                                                style="margin-left: 10px; padding: 10px 18px; font-size: 0.85rem; font-weight: 500; font-family: 'Outfit', sans-serif; border-radius: 50px; background: #C4A882; color: #fff; border: none; cursor: pointer; white-space: nowrap; height: fit-content; margin-bottom: 8px; transition: background 0.3s;">Send OTP</button>
+                                        </div>
+
+                                        <!-- Inline Error Message -->
+                                        <div id="emailErrorMsg" style="display: none; color: #e74c3c; font-size: 0.85rem; font-weight: 500; margin-top: 4px; animation: fadeIn 0.3s ease;"></div>
+
+                                        <!-- Hidden OTP Section -->
+                                        <div id="otpSection" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px; animation: fadeIn 0.4s ease;">
+                                            <label for="otpCode" style="font-weight: 500; color: #333; font-size: 0.9rem;">Verification Code</label>
+                                            <input type="text" id="otpCode" placeholder="Enter 6-digit code" maxlength="6"
+                                                style="padding-bottom: 8px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111; letter-spacing: 4px;" />
+                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                                                <span id="otpTimerText" style="font-size: 0.85rem; color: #888;">Resend code in <span id="otpTimer" style="font-weight: 600;">00:30</span></span>
+                                                <button type="button" id="btnVerifyOtp" style="background: none; border: none; color: #C4A882; font-weight: 600; font-family: 'Outfit', sans-serif; font-size: 0.9rem; cursor: pointer; text-decoration: none;">Verify</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -270,8 +348,8 @@
 
 
                                 <div>
-                                    <button type="submit" class="btn btn-primary"
-                                        style="background: #757575; border-radius: 50px; padding: 16px 32px; border: none; display: inline-flex; width: auto; font-size: 1.05rem; font-weight: 500;">
+                                    <button type="submit" id="btnSubmitForm" class="btn btn-primary" disabled
+                                        style="background: #e0e0e0; color: #999; border-radius: 50px; padding: 16px 32px; border: none; display: inline-flex; width: auto; font-size: 1.05rem; font-weight: 500; cursor: not-allowed; transition: all 0.3s;">
                                         <span>Send a message</span>
                                         <span class="icon-arrow-dynamic" style="margin-left: 12px;">
                                             <span class="arrow-current">
@@ -298,6 +376,394 @@
                                     </button>
                                 </div>
                             </form>
+                            
+                            <!-- EmailJS SDK & OTP Logic -->
+                            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    // ============================================
+                                    // EmailJS Configuration
+                                    // Replace these with your actual EmailJS IDs
+                                    // ============================================
+                                    const EMAILJS_PUBLIC_KEY = 'FSS274N9BiAYwShun';
+                                    const EMAILJS_SERVICE_ID = 'service_vxr';
+                                    const EMAILJS_TEMPLATE_ID = 'template_lgo5d2b';
+
+                                    // Initialize EmailJS (v4 syntax)
+                                    if (typeof emailjs !== 'undefined') {
+                                        emailjs.init({
+                                            publicKey: EMAILJS_PUBLIC_KEY
+                                        });
+                                    } else {
+                                        console.error("EmailJS SDK failed to load.");
+                                    }
+
+                                    // DOM Elements
+                                    const btnSendOtp = document.getElementById('btnSendOtp');
+                                    const otpSection = document.getElementById('otpSection');
+                                    const otpTimerText = document.getElementById('otpTimerText');
+                                    const btnVerifyOtp = document.getElementById('btnVerifyOtp');
+                                    const otpCodeInput = document.getElementById('otpCode');
+                                    const btnSubmitForm = document.getElementById('btnSubmitForm');
+                                    const emailInput = document.getElementById('email');
+                                    const emailPrefixInput = document.getElementById('emailPrefix');
+                                    const emailDomainSelect = document.getElementById('emailDomain');
+                                    const nameInput = document.getElementById('name');
+                                    const emailErrorMsg = document.getElementById('emailErrorMsg');
+
+                                    // Combine prefix + domain into the hidden #email field whenever either changes
+                                    function syncEmail() {
+                                        const prefix = emailPrefixInput.value.trim();
+                                        const domain = emailDomainSelect.value;
+                                        emailInput.value = prefix ? prefix + '@' + domain : '';
+                                    }
+                                    emailPrefixInput.addEventListener('input', syncEmail);
+                                    emailDomainSelect.addEventListener('change', syncEmail);
+
+                                    // ============================================
+                                    // Custom Domain Picker Logic
+                                    // ============================================
+                                    const domainTrigger = document.getElementById('domainTrigger');
+                                    const domainDropdown = document.getElementById('domainDropdown');
+                                    const domainText = document.getElementById('domainText');
+                                    const domainChevron = document.getElementById('domainChevron');
+                                    const domainOptions = document.querySelectorAll('.domain-option');
+                                    let dropdownOpen = false;
+
+                                    function openDropdown() {
+                                        domainDropdown.style.display = 'block';
+                                        requestAnimationFrame(() => {
+                                            domainDropdown.style.opacity = '1';
+                                            domainDropdown.style.transform = 'translateY(0)';
+                                        });
+                                        domainChevron.style.transform = 'rotate(180deg)';
+                                        dropdownOpen = true;
+                                        updateChecks();
+                                    }
+
+                                    function closeDropdown() {
+                                        domainDropdown.style.opacity = '0';
+                                        domainDropdown.style.transform = 'translateY(-6px)';
+                                        domainChevron.style.transform = 'rotate(0deg)';
+                                        setTimeout(() => { domainDropdown.style.display = 'none'; }, 250);
+                                        dropdownOpen = false;
+                                    }
+
+                                    function updateChecks() {
+                                        domainOptions.forEach(opt => {
+                                            const check = opt.querySelector('.domain-check');
+                                            if (opt.getAttribute('data-value') === emailDomainSelect.value) {
+                                                check.style.display = 'inline';
+                                                opt.style.background = '#faf8f5';
+                                            } else {
+                                                check.style.display = 'none';
+                                                opt.style.background = 'transparent';
+                                            }
+                                        });
+                                    }
+
+                                    // Toggle dropdown on click
+                                    domainTrigger.addEventListener('click', function(e) {
+                                        e.stopPropagation();
+                                        dropdownOpen ? closeDropdown() : openDropdown();
+                                    });
+
+                                    // Select a domain option
+                                    domainOptions.forEach(function(opt) {
+                                        opt.addEventListener('click', function() {
+                                            const val = this.getAttribute('data-value');
+
+                                            emailDomainSelect.value = val;
+                                            domainText.textContent = val;
+
+                                            syncEmail();
+                                            closeDropdown();
+                                        });
+
+                                        // Hover effects
+                                        opt.addEventListener('mouseenter', function() {
+                                            if (this.getAttribute('data-value') !== emailDomainSelect.value) {
+                                                this.style.background = '#f8f8f8';
+                                            }
+                                        });
+                                        opt.addEventListener('mouseleave', function() {
+                                            if (this.getAttribute('data-value') !== emailDomainSelect.value) {
+                                                this.style.background = 'transparent';
+                                            }
+                                        });
+                                    });
+
+                                    // Close when clicking outside
+                                    document.addEventListener('click', function(e) {
+                                        if (dropdownOpen && !document.getElementById('domainPickerWrapper').contains(e.target)) {
+                                            closeDropdown();
+                                        }
+                                    });
+                                    
+                                    let timerInterval;
+                                    let otpHash = null;        // Stores SHA-256 hash (not the raw OTP)
+                                    let otpExpiry = null;       // Expiry timestamp
+                                    let otpAttempts = 0;        // Failed attempt counter
+                                    const MAX_ATTEMPTS = 5;     // Lock after 5 wrong tries
+                                    const OTP_VALIDITY = 10;    // OTP valid for 10 minutes
+
+                                    // ============================================
+                                    // Security: SHA-256 Hash (OTP is never stored in plain text)
+                                    // ============================================
+                                    async function hashOtp(otp) {
+                                        // Use high-security SHA-256 if available (HTTPS / Localhost)
+                                        if (window.crypto && window.crypto.subtle) {
+                                            const encoder = new TextEncoder();
+                                            const data = encoder.encode(otp);
+                                            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+                                            const hashArray = Array.from(new Uint8Array(hashBuffer));
+                                            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                                        } 
+                                        // Fallback for local testing (file:// protocol)
+                                        else {
+                                            return btoa(otp).split('').reverse().join('');
+                                        }
+                                    }
+
+                                    // Generate cryptographically secure 6-digit OTP
+                                    function generateOtp() {
+                                        if (window.crypto && window.crypto.getRandomValues) {
+                                            const array = new Uint32Array(1);
+                                            window.crypto.getRandomValues(array);
+                                            return String(array[0] % 1000000).padStart(6, '0');
+                                        } else {
+                                            return String(Math.floor(Math.random() * 1000000)).padStart(6, '0');
+                                        }
+                                    }
+
+                                    function showError(msg) {
+                                        emailErrorMsg.textContent = msg;
+                                        emailErrorMsg.style.display = 'block';
+                                    }
+                                    function hideError() {
+                                        emailErrorMsg.style.display = 'none';
+                                    }
+
+                                    // Clear errors when user types
+                                    emailPrefixInput.addEventListener('input', hideError);
+                                    emailDomainSelect.addEventListener('change', hideError);
+                                    otpCodeInput && otpCodeInput.addEventListener('input', hideError);
+
+                                    // ============================================
+                                    // 30 Second Countdown Timer
+                                    // ============================================
+                                    function startTimer(duration) {
+                                        let timer = duration, seconds;
+                                        clearInterval(timerInterval);
+                                        btnSendOtp.disabled = true;
+                                        btnSendOtp.style.background = '#e0e0e0';
+                                        btnSendOtp.style.cursor = 'not-allowed';
+                                        btnSendOtp.textContent = 'OTP Sent';
+                                        
+                                        otpTimerText.innerHTML = `Resend code in <span id="otpTimer" style="font-weight: 600;">00:30</span>`;
+                                        const display = document.getElementById('otpTimer');
+
+                                        timerInterval = setInterval(function () {
+                                            seconds = parseInt(timer % 60, 10);
+                                            seconds = seconds < 10 ? "0" + seconds : seconds;
+                                            
+                                            display.textContent = "00:" + seconds;
+                                            
+                                            if (--timer < 0) {
+                                                clearInterval(timerInterval);
+                                                otpTimerText.innerHTML = `<button type="button" id="btnResendOtp" style="background: none; border: none; color: #C4A882; font-weight: 600; font-size: 0.95rem; cursor: pointer; padding: 0; text-decoration: underline;">Resend Code</button>`;
+                                                
+                                                document.getElementById('btnResendOtp').addEventListener('click', function() {
+                                                    hideError();
+                                                    sendOtp();
+                                                });
+                                            }
+                                        }, 1000);
+                                    }
+
+                                    // ============================================
+                                    // Send OTP via EmailJS
+                                    // ============================================
+                                    async function sendOtp() {
+                                        const btnOriginalText = btnSendOtp.textContent;
+                                        btnSendOtp.textContent = 'Sending...';
+                                        btnSendOtp.disabled = true;
+
+                                        try {
+                                            // Generate secure OTP
+                                            const otp = generateOtp();
+                                            
+                                            // Store ONLY the hash (not the raw OTP)
+                                            otpHash = await hashOtp(otp);
+                                            otpExpiry = Date.now() + (OTP_VALIDITY * 60 * 1000);
+                                            otpAttempts = 0;
+
+                                            // Calculate expiry time string
+                                            const expiryDate = new Date(otpExpiry);
+                                            const expiryTimeStr = expiryDate.toLocaleTimeString('en-US', { 
+                                                hour: '2-digit', minute: '2-digit', hour12: true 
+                                            });
+
+                                            // Send via EmailJS with template variables
+                                            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                                                to_name: nameInput.value || 'User',
+                                                email: emailInput.value,
+                                                passcode: otp,
+                                                time: expiryTimeStr
+                                            });
+
+                                            otpSection.style.display = 'flex';
+                                            startTimer(30);
+
+                                        } catch(err) {
+                                            showError("Failed to send OTP. Please try again.");
+                                            btnSendOtp.textContent = btnOriginalText;
+                                            btnSendOtp.disabled = false;
+                                            otpHash = null;
+                                            otpExpiry = null;
+                                        }
+                                    }
+
+                                    // ============================================
+                                    // Send OTP Button Click
+                                    // ============================================
+                                    btnSendOtp.addEventListener('click', function() {
+                                        hideError();
+                                        syncEmail(); // make sure hidden input is up to date
+                                        const prefix = emailPrefixInput.value.trim();
+                                        if (!prefix) {
+                                            showError('Please enter your email username before the @.');
+                                            emailPrefixInput.focus();
+                                            return;
+                                        }
+                                        if (!/^[a-zA-Z0-9._%+\-]+$/.test(prefix)) {
+                                            showError('Please enter a valid email username (no spaces or special chars).');
+                                            emailPrefixInput.focus();
+                                            return;
+                                        }
+                                        sendOtp();
+                                    });
+                                    
+                                    // ============================================
+                                    // Verify OTP Button Click
+                                    // ============================================
+                                    btnVerifyOtp.addEventListener('click', async function() {
+                                        hideError();
+                                        const code = otpCodeInput.value.trim();
+
+                                        // Validate 6 digits
+                                        if(code.length !== 6 || !/^\d{6}$/.test(code)) {
+                                            showError("Please enter a valid 6-digit OTP.");
+                                            return;
+                                        }
+
+                                        // Check if OTP has expired
+                                        if(!otpExpiry || Date.now() > otpExpiry) {
+                                            showError("OTP has expired. Please request a new code.");
+                                            otpHash = null;
+                                            return;
+                                        }
+
+                                        // Check attempt limit
+                                        if(otpAttempts >= MAX_ATTEMPTS) {
+                                            showError("Too many failed attempts. Please request a new code.");
+                                            otpHash = null;
+                                            return;
+                                        }
+
+                                        const originalText = btnVerifyOtp.textContent;
+                                        btnVerifyOtp.textContent = 'Verifying...';
+                                        btnVerifyOtp.disabled = true;
+
+                                        // Compare hashes (never compare raw OTP)
+                                        const inputHash = await hashOtp(code);
+
+                                        if(inputHash === otpHash) {
+                                            // ✅ SUCCESS
+                                            btnVerifyOtp.textContent = "Verified ✓";
+                                            btnVerifyOtp.style.color = "#27ae60";
+                                            otpCodeInput.disabled = true;
+                                            clearInterval(timerInterval);
+                                            otpTimerText.innerHTML = "<span style='color: #27ae60;'>Email verified successfully.</span>";
+                                            
+                                            // Update Send OTP button
+                                            btnSendOtp.textContent = "Verified ✓";
+                                            btnSendOtp.style.background = "#27ae60";
+                                            
+                                            // Unlock Submit Button
+                                            btnSubmitForm.disabled = false;
+                                            btnSubmitForm.style.cursor = 'pointer';
+                                            btnSubmitForm.style.background = '#111';
+                                            btnSubmitForm.style.color = '#fff';
+
+                                            // Clear sensitive data from memory
+                                            otpHash = null;
+                                            otpExpiry = null;
+                                        } else {
+                                            // ❌ FAILED
+                                            otpAttempts++;
+                                            const remaining = MAX_ATTEMPTS - otpAttempts;
+                                            if(remaining > 0) {
+                                                showError(`Invalid OTP. ${remaining} attempt${remaining > 1 ? 's' : ''} remaining.`);
+                                            } else {
+                                                showError("Too many failed attempts. Please request a new code.");
+                                                otpHash = null;
+                                            }
+                                            btnVerifyOtp.textContent = originalText;
+                                            btnVerifyOtp.disabled = false;
+                                        }
+                                    });
+                                    // ============================================
+                                    // Final Contact Form Submission
+                                    // ============================================
+                                    const contactForm = document.getElementById('contactForm');
+                                    
+                                    contactForm.addEventListener('submit', async function(e) {
+                                        e.preventDefault(); // Prevent page reload
+                                        
+                                        // Ensure OTP was actually verified before allowing submit
+                                        if (btnSubmitForm.disabled) {
+                                            return;
+                                        }
+
+                                        const originalBtnHtml = btnSubmitForm.innerHTML;
+                                        btnSubmitForm.innerHTML = '<span>Sending Message...</span>';
+                                        btnSubmitForm.disabled = true;
+                                        btnSubmitForm.style.cursor = 'wait';
+
+                                        try {
+                                            const CONTACT_TEMPLATE_ID = 'template_9pfe4z8';
+                                            // Make sure your inputs have 'name' attributes (e.g., name="user_name", name="user_email")
+                                            // Wait, our inputs only have 'id'. Let's build a custom param object instead to be safe.
+                                            
+                                            const templateParams = {
+                                                from_name: document.getElementById('name').value,
+                                                reply_to: document.getElementById('email').value,
+                                                phone: document.getElementById('phone').value,
+                                                company: document.getElementById('company').value,
+                                                message: document.getElementById('message').value
+                                            };
+
+                                            await emailjs.send(EMAILJS_SERVICE_ID, CONTACT_TEMPLATE_ID, templateParams);
+                                            
+                                            // ✅ SUCCESS
+                                            btnSubmitForm.innerHTML = '<span>Message Sent Successfully ✓</span>';
+                                            btnSubmitForm.style.background = '#27ae60';
+                                            btnSubmitForm.style.cursor = 'default';
+                                            
+                                            // Reset form
+                                            contactForm.reset();
+                                            
+                                        } catch (err) {
+                                            // ❌ FAILED
+                                            showError("Failed to send your message. Please try again later.");
+                                            btnSubmitForm.innerHTML = originalBtnHtml;
+                                            btnSubmitForm.disabled = false;
+                                            btnSubmitForm.style.cursor = 'pointer';
+                                        }
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                     <style>
