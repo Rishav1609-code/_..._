@@ -17,21 +17,49 @@
         '404.html'
     ];
 
+    // === ON-LOAD CHECK ===
+    // Catch invalid URLs typed directly into the address bar 
+    // (Works if the server acts as an SPA and serves a default HTML page for missing routes)
+    var currentPath = window.location.pathname.split('/');
+    var currentFile = currentPath.pop();
+    if (!currentFile) currentFile = 'index.html';
+
+    // If the current URL is NOT in the valid pages list, redirect to 404.html
+    if (validPages.indexOf(currentFile) === -1 && (currentFile.endsWith('.html') || currentFile.indexOf('.') === -1)) {
+        window.location.replace('404.html');
+    }
+
     document.addEventListener('click', function (e) {
         var link = e.target.closest('a');
-        if (!link) return;
+        if (!link || !link.href) return;
 
-        var href = link.getAttribute('href');
-        if (!href) return;
+        var url;
+        try {
+            // Use the fully resolved URL6
+            url = new URL(link.href);
+        } catch (err) {
+            return;
+        }
 
-        // Skip external links, anchors, mailto, tel, javascript
-        if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
+        // Ignore mailto, tel, javascript, etc.
+        if (url.protocol !== 'http:' && url.protocol !== 'https:' && url.protocol !== 'file:') return;
 
-        // Extract just the filename (ignore query strings and hashes)
-        var page = href.split('?')[0].split('#')[0];
+        // Only intercept clicks to the same origin (for web servers).
+        // For local files (file://), origin is often "null", so we skip the origin check.
+        if (url.protocol !== 'file:' && url.origin !== window.location.origin) return;
 
-        // If it's a valid page, let it through
-        if (validPages.indexOf(page) !== -1) return;
+        // Skip same-page anchors
+        if (url.pathname === window.location.pathname && url.hash) return;
+
+        // Extract filename from the path 
+        var pathSegments = url.pathname.split('/');
+        var filename = pathSegments.pop();
+
+        // If no filename (e.g., linked to root '/'), default to index.html
+        if (!filename) filename = 'index.html';
+
+        // Allow valid pages
+        if (validPages.indexOf(filename) !== -1) return;
 
         // Otherwise, redirect to 404
         e.preventDefault();
