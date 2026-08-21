@@ -1,409 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portfolio | vXr Holdings</title>
-    <meta name="description" content="vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow."/>
-    <link rel="icon" type="image/png" href="LOGO/vXr_FAVICON_bg-r.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css"/>
-    <style>
-        /* Page loader */
-        .page-loader {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: #0F0F0F;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
-        }
-        .page-loader.loaded {
-            opacity: 0;
-            visibility: hidden;
-        }
-        .loader-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 2.4rem;
-            color: #FEFEFE;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            opacity: 0;
-            animation: loaderPulse 1.2s ease-in-out infinite alternate;
-        }
-        .loader-logo .logo-x { color: #C4A882; }
-        @keyframes loaderPulse {
-            from { opacity: 0.3; }
-            to { opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | vXr Holdings</title>
+  <meta name="description" content="vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow."/>
+  <link rel="icon" type="image/png" href="LOGO/vXr_FAVICON_bg-r.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Page loader */
+    .page-loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #0F0F0F;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .page-loader.loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #FEFEFE;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: loaderPulse 1.2s ease-in-out infinite alternate;
+    }
+    .loader-logo .logo-x { color: #C4A882; }
+    @keyframes loaderPulse {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-logo" style="width: 220px; display: flex; justify-content: center; align-items: center;">
-            <img src="LOGO/vXr_bg_removed_LOGO.png" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo" style="width: 220px; display: flex; justify-content: center; align-items: center;">
+      <img src="LOGO/vXr_bg_removed_LOGO.webp" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;" width="220" height="100">
     </div>
+  </div>
 
-    <!-- App Wrapper for Framed Look -->
-    <div class="app-wrapper">
+  <!-- App Wrapper for Framed Look -->
+  <div class="app-wrapper" role="main">
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="navbar-wrapper">
-            <a href="index.html" class="navbar-logo" id="navLogo" style="display: flex; align-items: center; width: 140px; margin-top: -4px; margin-left: -20px;">
-                <img src="LOGO/vXr_bg_removed_LOGO.png" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;">
-            </a>
-            <div class="navbar-links" id="navLinks">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Our Ecosystem</a>
-                <a href="about.html" class="nav-link">About vXr</a>
-                <a href="investment-criteria.html" class="nav-link">Our Approach</a>
-                <a href="portfolio.html" class="nav-link active">Portfolio</a>
-            </div>
-            <div class="nav-cta">
-                <a href="contact.html" class="btn btn-primary">
-                    <span>Get in Touch</span>
-                    <span class="icon-arrow-dynamic">
-                                <span class="arrow-current">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                                <span class="arrow-next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </span>
-                </a>
-            </div>
-            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
-                <path d="M12.83 1.17L1.17 12.83M1.17 1.17L12.83 12.83" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-            </svg>
-        </button>
-        <div class="mobile-menu-wrapper">
-            <div>
-                <a href="index.html" class="nav-link-mobile" onclick="closeMobileMenu()">Home</a>
-                <a href="services.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Ecosystem</a>
-                    <a href="about.html" class="nav-link-mobile" onclick="closeMobileMenu()">About vXr</a>
-                <a href="investment-criteria.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Approach</a>
-                <a href="portfolio.html" class="nav-link-mobile" onclick="closeMobileMenu()">Portfolio</a>
-                <a href="contact.html" class="nav-link-mobile" onclick="closeMobileMenu()">Contact Us</a>
-            </div>
-            <div class="mobile-menu-bottom">
-                <a href="mailto:info@vxrholdings.com" class="mobile-contact-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" fill="none">
-                        <path d="M5.87 0.03C7.34-0.01 8.79-0.01 10.25 0.03L10.3 0.03C11.44 0.06 12.36 0.08 13.1 0.21C13.87 0.34 14.5 0.6 15.03 1.13C15.55 1.66 15.81 2.28 15.94 3.04C16.07 3.76 16.09 4.66 16.11 5.77L16.11 5.82C16.13 6.57 16.13 7.31 16.11 8.06L16.11 8.1C16.09 9.21 16.07 10.11 15.94 10.83C15.81 11.59 15.55 12.21 15.03 12.74C14.5 13.27 13.87 13.53 13.1 13.67C12.36 13.79 11.44 13.82 10.3 13.85L10.25 13.85C8.79 13.88 7.34 13.88 5.87 13.85L5.83 13.85C4.68 13.82 3.76 13.79 3.03 13.67C2.26 13.53 1.63 13.27 1.1 12.74C0.57 12.21 0.31 11.59 0.18 10.83C0.06 10.11 0.04 9.21 0.01 8.1L0.01 8.06C-0.004 7.31-0.004 6.57 0.01 5.82L0.01 5.77C0.04 4.66 0.06 3.76 0.18 3.04C0.31 2.28 0.57 1.66 1.1 1.13C1.63 0.6 2.26 0.34 3.03 0.21C3.76 0.08 4.68 0.06 5.83 0.03L5.87 0.03ZM12.3 4.03C12.14 3.76 11.79 3.67 11.53 3.83L9.32 5.13C8.69 5.51 8.35 5.63 8.06 5.63C7.77 5.63 7.44 5.51 6.8 5.13L4.6 3.83C4.33 3.67 3.99 3.76 3.83 4.03C3.67 4.29 3.76 4.64 4.03 4.8L6.23 6.1C6.89 6.49 7.45 6.75 8.06 6.75C8.67 6.75 9.24 6.49 9.89 6.1L12.1 4.8C12.37 4.64 12.45 4.29 12.3 4.03Z" fill="currentColor"/>
-                    </svg>
-                    info@vxrholdings.com
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="mobile-contact-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" fill="none">
-                        <path d="M5.81 0C8.1 0 10.27 1.39 11.18 3.57C12.03 5.6 11.57 7.34 10.62 8.81C9.84 10.03 8.69 11.12 7.67 12.09C7.49 12.26 7.32 12.42 7.15 12.59C6.79 12.93 6.31 13.13 5.81 13.13C5.32 13.13 4.84 12.93 4.48 12.59L4.48 12.59C4.3 12.41 4.11 12.23 3.92 12.05C2.91 11.09 1.78 10.02 1.01 8.81C0.06 7.34-0.4 5.61 0.44 3.57C1.35 1.39 3.52 0 5.81 0ZM5.81 3.56C4.57 3.56 3.56 4.57 3.56 5.81C3.56 7.06 4.57 8.06 5.81 8.06C7.05 8.06 8.06 7.06 8.06 5.81C8.06 4.57 7.05 3.56 5.81 3.56Z" fill="currentColor"/>
-                        <path d="M1.31 13.13C1.7 13.13 2.02 13.42 2.06 13.81C2.07 13.82 2.09 13.84 2.13 13.87C2.26 13.98 2.5 14.1 2.87 14.22C3.59 14.46 4.63 14.63 5.81 14.63C7 14.63 8.04 14.46 8.76 14.22C9.12 14.1 9.36 13.98 9.49 13.87C9.53 13.84 9.55 13.82 9.57 13.81C9.6 13.42 9.92 13.13 10.31 13.13C10.73 13.13 11.06 13.46 11.06 13.88C11.06 14.41 10.74 14.8 10.42 15.05C10.1 15.3 9.68 15.5 9.23 15.65C8.32 15.95 7.11 16.13 5.81 16.13C4.51 16.13 3.3 15.95 2.39 15.65C1.94 15.5 1.52 15.3 1.2 15.05C0.89 14.8 0.56 14.41 0.56 13.88C0.56 13.46 0.9 13.13 1.31 13.13Z" fill="currentColor"/>
-                    </svg>
-                    Champaran, Bihar, INDIA
-                </a>
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-wrapper">
+      <a href="index.html" class="navbar-logo" id="navLogo" style="display: flex; align-items: center; width: 140px; margin-top: -4px; margin-left: -20px;">
+        <img src="LOGO/vXr_bg_removed_LOGO.webp" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;" width="220" height="100">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Our Ecosystem</a>
+        <a href="about.html" class="nav-link">About vXr</a>
+        <a href="investment-criteria.html" class="nav-link">Our Approach</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">
+          <span>Get in Touch</span>
+          <span class="icon-arrow-dynamic">
+                <span class="arrow-current">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="arrow-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </span>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
+  </nav>
 
-    <!-- Page Content -->
-    <div id="top">
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+        <path d="M12.83 1.17L1.17 12.83M1.17 1.17L12.83 12.83" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="mobile-menu-wrapper">
+      <div>
+        <a href="index.html" class="nav-link-mobile" onclick="closeMobileMenu()">Home</a>
+        <a href="services.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Ecosystem</a>
+          <a href="about.html" class="nav-link-mobile" onclick="closeMobileMenu()">About vXr</a>
+        <a href="investment-criteria.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Approach</a>
+        <a href="portfolio.html" class="nav-link-mobile" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="contact.html" class="nav-link-mobile" onclick="closeMobileMenu()">Contact Us</a>
+      </div>
+      <div class="mobile-menu-bottom">
+        <a href="mailto:info@vxrholdings.com" class="mobile-contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" fill="none">
+            <path d="M5.87 0.03C7.34-0.01 8.79-0.01 10.25 0.03L10.3 0.03C11.44 0.06 12.36 0.08 13.1 0.21C13.87 0.34 14.5 0.6 15.03 1.13C15.55 1.66 15.81 2.28 15.94 3.04C16.07 3.76 16.09 4.66 16.11 5.77L16.11 5.82C16.13 6.57 16.13 7.31 16.11 8.06L16.11 8.1C16.09 9.21 16.07 10.11 15.94 10.83C15.81 11.59 15.55 12.21 15.03 12.74C14.5 13.27 13.87 13.53 13.1 13.67C12.36 13.79 11.44 13.82 10.3 13.85L10.25 13.85C8.79 13.88 7.34 13.88 5.87 13.85L5.83 13.85C4.68 13.82 3.76 13.79 3.03 13.67C2.26 13.53 1.63 13.27 1.1 12.74C0.57 12.21 0.31 11.59 0.18 10.83C0.06 10.11 0.04 9.21 0.01 8.1L0.01 8.06C-0.004 7.31-0.004 6.57 0.01 5.82L0.01 5.77C0.04 4.66 0.06 3.76 0.18 3.04C0.31 2.28 0.57 1.66 1.1 1.13C1.63 0.6 2.26 0.34 3.03 0.21C3.76 0.08 4.68 0.06 5.83 0.03L5.87 0.03ZM12.3 4.03C12.14 3.76 11.79 3.67 11.53 3.83L9.32 5.13C8.69 5.51 8.35 5.63 8.06 5.63C7.77 5.63 7.44 5.51 6.8 5.13L4.6 3.83C4.33 3.67 3.99 3.76 3.83 4.03C3.67 4.29 3.76 4.64 4.03 4.8L6.23 6.1C6.89 6.49 7.45 6.75 8.06 6.75C8.67 6.75 9.24 6.49 9.89 6.1L12.1 4.8C12.37 4.64 12.45 4.29 12.3 4.03Z" fill="currentColor"/>
+          </svg>
+          info@vxrholdings.com
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="mobile-contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" fill="none">
+            <path d="M5.81 0C8.1 0 10.27 1.39 11.18 3.57C12.03 5.6 11.57 7.34 10.62 8.81C9.84 10.03 8.69 11.12 7.67 12.09C7.49 12.26 7.32 12.42 7.15 12.59C6.79 12.93 6.31 13.13 5.81 13.13C5.32 13.13 4.84 12.93 4.48 12.59L4.48 12.59C4.3 12.41 4.11 12.23 3.92 12.05C2.91 11.09 1.78 10.02 1.01 8.81C0.06 7.34-0.4 5.61 0.44 3.57C1.35 1.39 3.52 0 5.81 0ZM5.81 3.56C4.57 3.56 3.56 4.57 3.56 5.81C3.56 7.06 4.57 8.06 5.81 8.06C7.05 8.06 8.06 7.06 8.06 5.81C8.06 4.57 7.05 3.56 5.81 3.56Z" fill="currentColor"/>
+            <path d="M1.31 13.13C1.7 13.13 2.02 13.42 2.06 13.81C2.07 13.82 2.09 13.84 2.13 13.87C2.26 13.98 2.5 14.1 2.87 14.22C3.59 14.46 4.63 14.63 5.81 14.63C7 14.63 8.04 14.46 8.76 14.22C9.12 14.1 9.36 13.98 9.49 13.87C9.53 13.84 9.55 13.82 9.57 13.81C9.6 13.42 9.92 13.13 10.31 13.13C10.73 13.13 11.06 13.46 11.06 13.88C11.06 14.41 10.74 14.8 10.42 15.05C10.1 15.3 9.68 15.5 9.23 15.65C8.32 15.95 7.11 16.13 5.81 16.13C4.51 16.13 3.3 15.95 2.39 15.65C1.94 15.5 1.52 15.3 1.2 15.05C0.89 14.8 0.56 14.41 0.56 13.88C0.56 13.46 0.9 13.13 1.31 13.13Z" fill="currentColor"/>
+          </svg>
+          Champaran, Bihar, INDIA
+        </a>
+      </div>
+    </div>
+  </div>
 
-        <!-- ===== SUB HERO ===== -->
-        <section class="section-hero" id="hero" style="min-height: 60vh;">
-            <div class="hero-bg">
-                <img src="images/FOR_Portfolio.jpeg" alt="Portfolio" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-content">
-                <div class="hero-text-block" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h1 class="hero-title reveal">Verified Innovation</h1>
-                    <p class="hero-subtitle reveal reveal-delay-1" style="font-size: 1.25rem; margin-left: auto; margin-right: auto;">A showcase of our high-performing, security-first platforms. We engineer every application to deliver absolute trust, seamless usability, and real-world results.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Page Content -->
+  <div id="top">
+
+    <!-- ===== SUB HERO ===== -->
+    <section class="section-hero" id="hero" style="min-height: 60vh;">
+      <div class="hero-bg">
+        <img src="images/FOR_Portfolio.webp" alt="Portfolio" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text-block" style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h1 class="hero-title reveal">Verified Innovation</h1>
+          <p class="hero-subtitle reveal reveal-delay-1" style="font-size: 1.25rem; margin-left: auto; margin-right: auto;">A showcase of our high-performing, security-first platforms. We engineer every application to deliver absolute trust, seamless usability, and real-world results.</p>
+        </div>
+      </div>
+    </section>
 <!-- ===== PORTFOLIO SECTION ===== -->
 <section class="section-portfolio-cards" id="portfolio-companies">
-    <div class="container">
+  <div class="container">
 
-        <!-- Section Header + Filter -->
-        <div class="pf-top-bar">
-            <div class="pf-top-bar-left">
-                <h2 class="pf-title reveal">Trusted by Growing Brands</h2>
-                <p class="pf-subtitle reveal">Explore how the vXr ecosystem delivers high-performance digital solutions—from custom websites to seamless apps—for our trusted clients. </p>
-            </div>
-            <div class="pf-filter-wrap">
-                <button class="pf-filter-btn" id="pfFilterBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
-                    Filter
-                </button>
-                <!-- Filter Dropdown -->
-                <div class="pf-filter-dropdown" id="pfFilterDropdown">
-                    <div class="pf-filter-col">
-                        <div class="pf-filter-col-title">Service:</div>
-                        <label><input type="checkbox" value="web-development" data-filter="service"> Web Development</label>
-                        <label><input type="checkbox" value="e-commerce" data-filter="service"> E-Commerce Platforms</label>
-                        <label><input type="checkbox" value="ui-ux-design" data-filter="service"> UI/UX & Design</label>
-                    </div>
-                    <div class="pf-filter-col">
-                        <div class="pf-filter-col-title">Sector:</div>
-                        <label><input type="checkbox" value="food-hospitality" data-filter="sector"> Food & Hospitality</label>
-                        <label><input type="checkbox" value="retail-ecommerce" data-filter="sector"> Retail & E-Commerce</label>
-                        <label><input type="checkbox" value="education-edtech" data-filter="sector"> Education & EdTech</label>
-                        <label><input type="checkbox" value="media-photography" data-filter="sector"> Media & Photography</label>
-                    </div>
-                    <div class="pf-filter-col">
-                        <div class="pf-filter-col-title">Year:</div>
-                        <label><input type="checkbox" value="2024" data-filter="year"> 2024</label>
-                        <label><input type="checkbox" value="2025" data-filter="year"> 2025</label>
-                        <label><input type="checkbox" value="2026" data-filter="year"> 2026</label>
-                    </div>
-                    <div class="pf-filter-col">
-                        <div class="pf-filter-col-title">Status:</div>
-                        <label><input type="checkbox" value="live" data-filter="status"> Live & Active</label>
-                        <label><input type="checkbox" value="in-development" data-filter="status"> In Development</label>
-                    </div>
-                </div>
-            </div>
+    <!-- Section Header + Filter -->
+    <div class="pf-top-bar">
+      <div class="pf-top-bar-left">
+        <h2 class="pf-title reveal">Trusted by Growing Brands</h2>
+        <p class="pf-subtitle reveal">Explore how the vXr ecosystem delivers high-performance digital solutions—from custom websites to seamless apps—for our trusted clients. </p>
+      </div>
+      <div class="pf-filter-wrap">
+        <button class="pf-filter-btn" id="pfFilterBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          Filter
+        </button>
+        <!-- Filter Dropdown -->
+        <div class="pf-filter-dropdown" id="pfFilterDropdown">
+          <div class="pf-filter-col">
+            <div class="pf-filter-col-title">Service:</div>
+            <label><input type="checkbox" value="web-development" data-filter="service"> Web Development</label>
+            <label><input type="checkbox" value="e-commerce" data-filter="service"> E-Commerce Platforms</label>
+            <label><input type="checkbox" value="ui-ux-design" data-filter="service"> UI/UX & Design</label>
+          </div>
+          <div class="pf-filter-col">
+            <div class="pf-filter-col-title">Sector:</div>
+            <label><input type="checkbox" value="food-hospitality" data-filter="sector"> Food & Hospitality</label>
+            <label><input type="checkbox" value="retail-ecommerce" data-filter="sector"> Retail & E-Commerce</label>
+            <label><input type="checkbox" value="education-edtech" data-filter="sector"> Education & EdTech</label>
+            <label><input type="checkbox" value="media-photography" data-filter="sector"> Media & Photography</label>
+          </div>
+          <div class="pf-filter-col">
+            <div class="pf-filter-col-title">Year:</div>
+            <label><input type="checkbox" value="2024" data-filter="year"> 2024</label>
+            <label><input type="checkbox" value="2025" data-filter="year"> 2025</label>
+            <label><input type="checkbox" value="2026" data-filter="year"> 2026</label>
+          </div>
+          <div class="pf-filter-col">
+            <div class="pf-filter-col-title">Status:</div>
+            <label><input type="checkbox" value="live" data-filter="status"> Live & Active</label>
+            <label><input type="checkbox" value="in-development" data-filter="status"> In Development</label>
+          </div>
         </div>
-
-        <!-- Active Filter Tags -->
-        <div class="pf-active-filters" id="pfActiveTags"></div>
-
-        <!-- Cards Grid -->
-        <div class="pf-cards-grid" id="pfCardsGrid">
-
-            <!-- Company 1: Swoogo -->
-            <div class="pf-card" data-service="web-development" data-sector="food-hospitality" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/champaran_handi_junction-bg-r.png" alt="Champaran Handi Junction">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>Champaran Handi Junction</h3>
-                        <p>A viral culinary sensation in Pune. We engineered a high-performance digital storefront to convert their massive social media following into direct, high-volume orders.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> Hospitality &amp; Dining</span>
-                            <span><em>Location:</em> Pune, Maharashtra</span>
-                            <span><em>Service:</em> Custom Web Development</span>
-                            <span><em>Solution:</em> Digital Storefront &amp; UI/UX</span>
-                            <span><em>Core Impact:</em> Scaled Online Orders</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> champaranhandijunction.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 2: Oakmont Education -->
-            <div class="pf-card" data-service="e-commerce" data-sector="retail-ecommerce" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/B&D-bg-r.png" alt="B&D">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>B&amp;D Handloom</h3>
-                        <p>A premier B&amp;D wholesale apparel distributor. We engineered a robust e-commerce platform and digital catalog to automate bulk ordering and streamline their digital supply chain.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Industry:</em> B&amp;D Wholesale Apparel</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Service:</em> Custom B&amp;D E-Commerce</span>
-                            <span><em>Solution:</em> Digital Catalog &amp; Automation</span>
-                            <span><em>Core Impact:</em> Scaled Wholesale Orders</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> b&amp;dhandloom.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 3: TelcoBridges -->
-            <div class="pf-card" data-service="ui-ux-design" data-sector="media-photography" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/ab photogrpghy-bg-r.png" alt="AB Photography" style="background-color: #0b757b; padding: 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(11, 117, 123, 0.3);">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>Ab Photography</h3>
-                        <p>A premier visual media and photography studio. We engineered an ultra-responsive, high-resolution digital portfolio and automated booking system designed to showcase heavy media galleries without latency and convert viewers into high-value clients.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> Photography &amp; Visual Media</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Service:</em> Custom Web &amp; Gallery Design</span>
-                            <span><em>Solution:</em> High-Res Media Hosting &amp; Booking UI</span>
-                            <span><em>Core Impact:</em> Scaled Client Inquiries &amp; Bookings</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> abphotography.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 4: OnPoint Generators -->
-            <div class="pf-card" data-service="web-development" data-sector="education-edtech" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/PADHLE_AGYANI-bg-r.png" alt="PADHLE AGYANI">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>PADH LE AGYANI</h3>
-                        <p>A rapidly growing digital education platform specializing in simplifying physics for competitive exams. We engineered a high-performance web hub to streamline lecture access and centralize learning resources</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> EdTech &amp; E-Learning</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Service:</em> Custom Platform Development</span>
-                            <span><em>Solution:</em> Video Architecture &amp; Resource Hub</span>
-                            <span><em>Core Impact:</em> Boosted Student Engagement</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> padhleagyani.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 5: SabrePak -->
-            <div class="pf-card" data-service="web-development" data-sector="education-edtech" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/ASAS_-bg-r.png" alt="ASAS">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>ASAS ACADEMY</h3>
-                        <p>Shaping academic excellence for IIT-JEE, NEET, and board aspirants through a custom-built, high-performance web architecture optimized for secure learning modules.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> Academic Education</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Project Type:</em> Web Infrastructure</span>
-                            <span><em>Focus:</em> Resource Security &amp; Scalability</span>
-                            <span><em>Tech Impact:</em> Streamlined Course Management</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> asasacademy.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 6: Paradosi Partners -->
-            <div class="pf-card" data-service="e-commerce" data-sector="retail-ecommerce" data-year="2024" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/sonali_jewellers.png" alt="Sonali Jewellers">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>Sonali Jewellers</h3>
-                        <p>An elite, high-traffic luxury jewellery emporium. We engineered a secure, enterprise-grade digital flagship store to showcase their investment-grade collections and seamlessly manage massive daily inquiries.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> Luxury Retail &amp; E-Commerce</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Service:</em> Enterprise Platform Engineering</span>
-                            <span><em>Solution:</em> Secure Digital Storefront &amp; UI</span>
-                            <span><em>Core Impact:</em> Scaled High-Value Inquiries</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> sonalijewellers.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Company 7: New Portfolio Company -->
-            <div class="pf-card" data-service="web-development" data-sector="food-hospitality" data-year="2025" data-status="live">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <img src="clients_logo/baranwal_bakery.png" alt="Baranwal Bakery">
-                    </div>
-                    <div class="pf-card-back">
-                        <h3>Baranwal Bakery</h3>
-                        <p>A popular artisanal bakery and confectionery brand. We engineered an integrated online ordering platform and custom cake configuration module to automate complex catering requests and eliminate manual order bottlenecks.</p>
-                        <div class="pf-card-meta">
-                            <span><em>Sector:</em> Food &amp; E-Commerce</span>
-                            <span><em>Location:</em> Champaran, Bihar</span>
-                            <span><em>Service:</em> Custom Platform Engineering</span>
-                            <span><em>Solution:</em> Automated Order Management &amp; UI</span>
-                            <span><em>Core Impact:</em> Streamlined Bulk Operations</span>
-                            <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
-                            <span><em>Website:</em> baranwalbakery.vxrholdings.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 8: New Portfolio Company -->
-            <div class="pf-card" data-service="stealth" data-sector="stealth" data-year="2025" data-status="in-development">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <div class="pf-logo-placeholder" style="color:#27ae60; font-size:2.5rem; font-weight:700;">
-                            Company 8
-                        </div>
-                    </div>
-                    <div class="pf-card-back">
-                        <div style="text-align: center; margin: auto 0;">
-                            <h3 style="margin-bottom: 12px; color: #fff;">Project in Stealth</h3>
-                            <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 20px;">A new enterprise-grade digital architecture is currently in development. Details and impact metrics will be unveiled upon official launch.</p>
-                            <span class="pf-badge" style="background:rgba(255,255,255,0.08); color:rgba(241,232,217,0.7);">In Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company 9: New Portfolio Company -->
-            <div class="pf-card" data-service="stealth" data-sector="stealth" data-year="2026" data-status="in-development">
-                <div class="pf-card-inner">
-                    <div class="pf-card-front">
-                        <div class="pf-logo-placeholder" style="color:#e67e22; font-size:2.5rem; font-weight:700;">
-                            Company 9
-                        </div>
-                    </div>
-                    <div class="pf-card-back">
-                        <div style="text-align: center; margin: auto 0;">
-                            <h3 style="margin-bottom: 12px; color: #fff;">Project in Stealth</h3>
-                            <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 20px;">A new enterprise-grade digital architecture is currently in development. Details and impact metrics will be unveiled upon official launch.</p>
-                            <span class="pf-badge" style="background:rgba(255,255,255,0.08); color:rgba(241,232,217,0.7);">In Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /pf-cards-grid -->
-
-        <!-- No Results -->
-        <div class="pf-no-results" id="pfNoResults" style="display:none;">
-            <p>No companies match your selected filters. Try clearing a filter.</p>
-        </div>
-
+      </div>
     </div>
+
+    <!-- Active Filter Tags -->
+    <div class="pf-active-filters" id="pfActiveTags"></div>
+
+    <!-- Cards Grid -->
+    <div class="pf-cards-grid" id="pfCardsGrid">
+
+      <!-- Company 1: Swoogo -->
+      <div class="pf-card" data-service="web-development" data-sector="food-hospitality" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/champaran_handi_junction-bg-r.webp" alt="Champaran Handi Junction" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>Champaran Handi Junction</h3>
+            <p>A viral culinary sensation in Pune. We engineered a high-performance digital storefront to convert their massive social media following into direct, high-volume orders.</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> Hospitality &amp; Dining</span>
+              <span><em>Location:</em> Pune, Maharashtra</span>
+              <span><em>Service:</em> Custom Web Development</span>
+              <span><em>Solution:</em> Digital Storefront &amp; UI/UX</span>
+              <span><em>Core Impact:</em> Scaled Online Orders</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> champaranhandijunction.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 2: Oakmont Education -->
+      <div class="pf-card" data-service="e-commerce" data-sector="retail-ecommerce" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/B&D-bg-r.webp" alt="B&D" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>B&amp;D Handloom</h3>
+            <p>A premier B&amp;D wholesale apparel distributor. We engineered a robust e-commerce platform and digital catalog to automate bulk ordering and streamline their digital supply chain.</p>
+            <div class="pf-card-meta">
+              <span><em>Industry:</em> B&amp;D Wholesale Apparel</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Service:</em> Custom B&amp;D E-Commerce</span>
+              <span><em>Solution:</em> Digital Catalog &amp; Automation</span>
+              <span><em>Core Impact:</em> Scaled Wholesale Orders</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> b&amp;dhandloom.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 3: TelcoBridges -->
+      <div class="pf-card" data-service="ui-ux-design" data-sector="media-photography" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/ab photogrpghy-bg-r.webp" alt="AB Photography" style="background-color: #0b757b; padding: 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(11, 117, 123, 0.3);">
+          </div>
+          <div class="pf-card-back">
+            <h3>Ab Photography</h3>
+            <p>A premier visual media and photography studio. We engineered an ultra-responsive, high-resolution digital portfolio and automated booking system designed to showcase heavy media galleries without latency and convert viewers into high-value clients.</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> Photography &amp; Visual Media</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Service:</em> Custom Web &amp; Gallery Design</span>
+              <span><em>Solution:</em> High-Res Media Hosting &amp; Booking UI</span>
+              <span><em>Core Impact:</em> Scaled Client Inquiries &amp; Bookings</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> abphotography.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 4: OnPoint Generators -->
+      <div class="pf-card" data-service="web-development" data-sector="education-edtech" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/PADHLE_AGYANI-bg-r.webp" alt="PADHLE AGYANI" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>PADH LE AGYANI</h3>
+            <p>A rapidly growing digital education platform specializing in simplifying physics for competitive exams. We engineered a high-performance web hub to streamline lecture access and centralize learning resources</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> EdTech &amp; E-Learning</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Service:</em> Custom Platform Development</span>
+              <span><em>Solution:</em> Video Architecture &amp; Resource Hub</span>
+              <span><em>Core Impact:</em> Boosted Student Engagement</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> padhleagyani.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 5: SabrePak -->
+      <div class="pf-card" data-service="web-development" data-sector="education-edtech" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/ASAS_-bg-r.webp" alt="ASAS" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>ASAS ACADEMY</h3>
+            <p>Shaping academic excellence for IIT-JEE, NEET, and board aspirants through a custom-built, high-performance web architecture optimized for secure learning modules.</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> Academic Education</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Project Type:</em> Web Infrastructure</span>
+              <span><em>Focus:</em> Resource Security &amp; Scalability</span>
+              <span><em>Tech Impact:</em> Streamlined Course Management</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> asasacademy.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 6: Paradosi Partners -->
+      <div class="pf-card" data-service="e-commerce" data-sector="retail-ecommerce" data-year="2024" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/sonali_jewellers.webp" alt="Sonali Jewellers" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>Sonali Jewellers</h3>
+            <p>An elite, high-traffic luxury jewellery emporium. We engineered a secure, enterprise-grade digital flagship store to showcase their investment-grade collections and seamlessly manage massive daily inquiries.</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> Luxury Retail &amp; E-Commerce</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Service:</em> Enterprise Platform Engineering</span>
+              <span><em>Solution:</em> Secure Digital Storefront &amp; UI</span>
+              <span><em>Core Impact:</em> Scaled High-Value Inquiries</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> sonalijewellers.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Company 7: New Portfolio Company -->
+      <div class="pf-card" data-service="web-development" data-sector="food-hospitality" data-year="2025" data-status="live">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <img src="clients_logo/baranwal_bakery.webp" alt="Baranwal Bakery" width="200" height="150" loading="lazy">
+          </div>
+          <div class="pf-card-back">
+            <h3>Baranwal Bakery</h3>
+            <p>A popular artisanal bakery and confectionery brand. We engineered an integrated online ordering platform and custom cake configuration module to automate complex catering requests and eliminate manual order bottlenecks.</p>
+            <div class="pf-card-meta">
+              <span><em>Sector:</em> Food &amp; E-Commerce</span>
+              <span><em>Location:</em> Champaran, Bihar</span>
+              <span><em>Service:</em> Custom Platform Engineering</span>
+              <span><em>Solution:</em> Automated Order Management &amp; UI</span>
+              <span><em>Core Impact:</em> Streamlined Bulk Operations</span>
+              <span><em>Status:</em> <span class="pf-badge current">Live &amp; Active</span></span>
+              <span><em>Website:</em> baranwalbakery.vxrholdings.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 8: New Portfolio Company -->
+      <div class="pf-card" data-service="stealth" data-sector="stealth" data-year="2025" data-status="in-development">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <div class="pf-logo-placeholder" style="color:#27ae60; font-size:2.5rem; font-weight:700;">
+              Company 8
+            </div>
+          </div>
+          <div class="pf-card-back">
+            <div style="text-align: center; margin: auto 0;">
+              <h3 style="margin-bottom: 12px; color: #fff;">Project in Stealth</h3>
+              <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 20px;">A new enterprise-grade digital architecture is currently in development. Details and impact metrics will be unveiled upon official launch.</p>
+              <span class="pf-badge" style="background:rgba(255,255,255,0.08); color:rgba(241,232,217,0.7);">In Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company 9: New Portfolio Company -->
+      <div class="pf-card" data-service="stealth" data-sector="stealth" data-year="2026" data-status="in-development">
+        <div class="pf-card-inner">
+          <div class="pf-card-front">
+            <div class="pf-logo-placeholder" style="color:#e67e22; font-size:2.5rem; font-weight:700;">
+              Company 9
+            </div>
+          </div>
+          <div class="pf-card-back">
+            <div style="text-align: center; margin: auto 0;">
+              <h3 style="margin-bottom: 12px; color: #fff;">Project in Stealth</h3>
+              <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 20px;">A new enterprise-grade digital architecture is currently in development. Details and impact metrics will be unveiled upon official launch.</p>
+              <span class="pf-badge" style="background:rgba(255,255,255,0.08); color:rgba(241,232,217,0.7);">In Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /pf-cards-grid -->
+
+    <!-- No Results -->
+    <div class="pf-no-results" id="pfNoResults" style="display:none;">
+      <p>No companies match your selected filters. Try clearing a filter.</p>
+    </div>
+
+  </div>
 </section>
 
 <style>
 .section-portfolio-cards { padding: 100px 0; background: #F7F4F0; }
 .pf-top-bar { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:40px; gap:24px; flex-wrap:wrap; }
 .pf-title { font-family:'Outfit',sans-serif; font-size:clamp(1.9rem,3vw,2.8rem); font-weight:700; color:#111; margin-bottom:10px; line-height:1.15; }
-.pf-subtitle { font-size:0.9rem; color:#888; max-width:340px; line-height:1.6; }
+.pf-subtitle { font-size:0.9rem; color:#bbb; max-width:340px; line-height:1.6; }
 .pf-filter-wrap { position:relative; flex-shrink:0; }
 .pf-filter-btn { display:inline-flex; align-items:center; gap:9px; padding:11px 24px; background:#2F1E13; color:#F1E8D9; border:none; border-radius:50px; font-family:'Outfit',sans-serif; font-size:0.88rem; font-weight:500; cursor:pointer; transition:all 0.25s ease; letter-spacing:0.03em; box-shadow:0 4px 16px rgba(47,30,19,0.18); }
 .pf-filter-btn:hover, .pf-filter-btn.active { background:#C4A882; color:#1a1a1a; box-shadow:0 6px 24px rgba(196,168,130,0.3); }
@@ -433,15 +433,15 @@
 .pf-card-back::before, .pf-card-back::after { content: ''; margin: auto 0; flex-shrink: 0; min-height: 0; }
 
 @media(max-width:900px){
-    .pf-cards-grid{grid-template-columns:repeat(2,1fr);}
-    .pf-card { height: 580px; }
-    .pf-card-back { padding: 32px; gap: 12px; }
+  .pf-cards-grid{grid-template-columns:repeat(2,1fr);}
+  .pf-card { height: 580px; }
+  .pf-card-back { padding: 32px; gap: 12px; }
 }
 @media(max-width:580px){
-    .pf-cards-grid{grid-template-columns:1fr;} 
-    .pf-filter-dropdown{min-width:300px;right:-20px;}
-    .pf-card { height: 600px; }
-    .pf-card-back { padding: 24px; gap: 10px; }
+  .pf-cards-grid{grid-template-columns:1fr;} 
+  .pf-filter-dropdown{min-width:300px;right:-20px;}
+  .pf-card { height: 600px; }
+  .pf-card-back { padding: 24px; gap: 10px; }
 }
 .pf-card-back::-webkit-scrollbar { width: 5px; }
 .pf-card-back::-webkit-scrollbar-track { background: transparent; }
@@ -461,400 +461,400 @@
 
 <script>
 (function(){
-    var btn=document.getElementById('pfFilterBtn');
-    var dropdown=document.getElementById('pfFilterDropdown');
-    var grid=document.getElementById('pfCardsGrid');
-    var noResults=document.getElementById('pfNoResults');
-    var tagsWrap=document.getElementById('pfActiveTags');
-    var checkboxes=dropdown?Array.from(dropdown.querySelectorAll('input[type="checkbox"]')):[];
-    var labels={'web-development':'Web Development','e-commerce':'E-Commerce Platforms','ui-ux-design':'UI/UX & Design','food-hospitality':'Food & Hospitality','retail-ecommerce':'Retail & E-Commerce','education-edtech':'Education & EdTech','media-photography':'Media & Photography','2024':'2024','2025':'2025','2026':'2026','live':'Live & Active','in-development':'In Development'};
-    if(btn&&dropdown){
-        btn.addEventListener('click',function(e){e.stopPropagation();dropdown.classList.toggle('open');btn.classList.toggle('active');});
-        document.addEventListener('click',function(e){if(!dropdown.contains(e.target)&&e.target!==btn){dropdown.classList.remove('open');btn.classList.remove('active');}});
-    }
-    function applyFilters(){
-        var active={};
-        checkboxes.forEach(function(cb){if(cb.checked){var f=cb.dataset.filter;if(!active[f])active[f]=[];active[f].push(cb.value);}});
-        tagsWrap.innerHTML='';
-        Object.keys(active).forEach(function(fk){active[fk].forEach(function(val){var tag=document.createElement('div');tag.className='pf-tag';tag.innerHTML=(labels[val]||val)+' <button title="Remove">&times;</button>';tag.querySelector('button').addEventListener('click',function(){var cb=dropdown.querySelector('input[value="'+val+'"][data-filter="'+fk+'"]');if(cb){cb.checked=false;applyFilters();}});tagsWrap.appendChild(tag);});});
-        var cards=grid.querySelectorAll('.pf-card');var visible=0;var noF=Object.keys(active).length===0;
-        cards.forEach(function(card){
-            if(noF){card.classList.remove('pf-hidden');visible++;return;}
-            var show=true;
-            Object.keys(active).forEach(function(fk){var attr=fk;var cardVal=card.dataset[attr];if(!active[fk].includes(cardVal))show=false;});
-            if(show){card.classList.remove('pf-hidden');visible++;}else{card.classList.add('pf-hidden');}
-        });
-        noResults.style.display=visible===0?'block':'none';
-    }
-    checkboxes.forEach(function(cb){cb.addEventListener('change',applyFilters);});
+  var btn=document.getElementById('pfFilterBtn');
+  var dropdown=document.getElementById('pfFilterDropdown');
+  var grid=document.getElementById('pfCardsGrid');
+  var noResults=document.getElementById('pfNoResults');
+  var tagsWrap=document.getElementById('pfActiveTags');
+  var checkboxes=dropdown?Array.from(dropdown.querySelectorAll('input[type="checkbox"]')):[];
+  var labels={'web-development':'Web Development','e-commerce':'E-Commerce Platforms','ui-ux-design':'UI/UX & Design','food-hospitality':'Food & Hospitality','retail-ecommerce':'Retail & E-Commerce','education-edtech':'Education & EdTech','media-photography':'Media & Photography','2024':'2024','2025':'2025','2026':'2026','live':'Live & Active','in-development':'In Development'};
+  if(btn&&dropdown){
+    btn.addEventListener('click',function(e){e.stopPropagation();dropdown.classList.toggle('open');btn.classList.toggle('active');});
+    document.addEventListener('click',function(e){if(!dropdown.contains(e.target)&&e.target!==btn){dropdown.classList.remove('open');btn.classList.remove('active');}});
+  }
+  function applyFilters(){
+    var active={};
+    checkboxes.forEach(function(cb){if(cb.checked){var f=cb.dataset.filter;if(!active[f])active[f]=[];active[f].push(cb.value);}});
+    tagsWrap.innerHTML='';
+    Object.keys(active).forEach(function(fk){active[fk].forEach(function(val){var tag=document.createElement('div');tag.className='pf-tag';tag.innerHTML=(labels[val]||val)+' <button title="Remove">&times;</button>';tag.querySelector('button').addEventListener('click',function(){var cb=dropdown.querySelector('input[value="'+val+'"][data-filter="'+fk+'"]');if(cb){cb.checked=false;applyFilters();}});tagsWrap.appendChild(tag);});});
+    var cards=grid.querySelectorAll('.pf-card');var visible=0;var noF=Object.keys(active).length===0;
+    cards.forEach(function(card){
+      if(noF){card.classList.remove('pf-hidden');visible++;return;}
+      var show=true;
+      Object.keys(active).forEach(function(fk){var attr=fk;var cardVal=card.dataset[attr];if(!active[fk].includes(cardVal))show=false;});
+      if(show){card.classList.remove('pf-hidden');visible++;}else{card.classList.add('pf-hidden');}
+    });
+    noResults.style.display=visible===0?'block':'none';
+  }
+  checkboxes.forEach(function(cb){cb.addEventListener('change',applyFilters);});
 })();
 </script>
 
 
 <!-- ===== CTA SECTION ===== -->
-        <section class="section-cta" id="contact">
-            <div class="cta-bg">
-                <img src="images/vXr_lets-connect.jpeg" alt="City skyline"/>
-                <div class="overlay"></div>
-            </div>
-            <div class="container cta-content">
-                <h2 class="reveal">Let's Connect</h2>
-                <a href="contact.html" class="btn btn-primary reveal reveal-delay-1">
-                    <span>Get in Touch</span>
-                    <span class="icon-arrow-dynamic">
-                                <span class="arrow-current">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                                <span class="arrow-next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </span>
-                </a>
-            </div>
-        </section>
-    </div>
+    <section class="section-cta" id="contact">
+      <div class="cta-bg">
+        <img src="images/vXr_lets-connect.webp" alt="City skyline"/>
+        <div class="overlay"></div>
+      </div>
+      <div class="container cta-content">
+        <h2 class="reveal">Let's Connect</h2>
+        <a href="contact.html" class="btn btn-primary reveal reveal-delay-1">
+          <span>Get in Touch</span>
+          <span class="icon-arrow-dynamic">
+                <span class="arrow-current">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="arrow-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </span>
+        </a>
+      </div>
+    </section>
+  </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <div>
-                        <p class="footer-description">vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow.</p>
-                        <a href="contact.html" class="btn btn-outline"
-                            style="color: var(--color-cream); border-color: rgba(241,232,217,0.3);">
-                            <span>Get in Touch</span>
-                            <span class="icon-arrow-dynamic">
-                                <span class="arrow-current">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                                <span class="arrow-next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </span>
-                        </a>
-                    </div>
-                    <div>
-                        <div class="footer-col-title">Navigate</div>
-                        <a href="index.html" class="footer-link-item">Home</a>
-                        <a href="services.html" class="footer-link-item">Our Ecosystem</a>
-                        <a href="about.html" class="footer-link-item">About vXr</a>
-                        <a href="investment-criteria.html" class="footer-link-item">Our Approach</a>
-                        <a href="portfolio.html" class="footer-link-item">Portfolio</a>
-                    </div>
-                    <div>
-                        <div class="footer-col-title">Legal</div>
-                        <a href="terms-of-use.html" class="footer-link-item">Terms of Use</a>
-                        <a href="privacy-policy.html" class="footer-link-item">Privacy Policy</a>
-                    </div>
-                    <div>
-                        <div class="footer-col-title">Contact</div>
-                        <a href="mailto:info@vxrholdings.com" class="footer-link-item">info@vxrholdings.com</a>
-                        <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="footer-link-item">Champaran, Bihar, INDIA</a>
-                    </div>
-                </div>
-                <div class="footer-giant-logo-container">
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-description">vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow.</p>
+            <a href="contact.html" class="btn btn-outline"
+              style="color: var(--color-cream); border-color: rgba(241,232,217,0.3);">
+              <span>Get in Touch</span>
+              <span class="icon-arrow-dynamic">
+                <span class="arrow-current">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="arrow-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Navigate</div>
+            <a href="index.html" class="footer-link-item">Home</a>
+            <a href="services.html" class="footer-link-item">Our Ecosystem</a>
+            <a href="about.html" class="footer-link-item">About vXr</a>
+            <a href="investment-criteria.html" class="footer-link-item">Our Approach</a>
+            <a href="portfolio.html" class="footer-link-item">Portfolio</a>
+          </div>
+          <div>
+            <div class="footer-col-title">Legal</div>
+            <a href="terms-of-use.html" class="footer-link-item">Terms of Use</a>
+            <a href="privacy-policy.html" class="footer-link-item">Privacy Policy</a>
+          </div>
+          <div>
+            <div class="footer-col-title">Contact</div>
+            <a href="mailto:info@vxrholdings.com" class="footer-link-item">info@vxrholdings.com</a>
+            <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="footer-link-item">Champaran, Bihar, INDIA</a>
+          </div>
+        </div>
+        <div class="footer-giant-logo-container">
 </div>
-                
-                <div class="footer-socials">
-                    <a href="#" class="social-icon" title="LinkedIn">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" title="X (Twitter)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" title="YouTube">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" title="Facebook">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" title="Instagram">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" title="Threads">
-                        <img src="icons/threads_.png" alt="Threads" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
-                    </a>
-                    <a href="#" class="social-icon" title="Medium">
-                        <img src="icons/medium_light.png" alt="Medium" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease; mix-blend-mode: screen;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
-                    </a>
-                </div>
+        
+        <div class="footer-socials">
+          <a href="#" class="social-icon" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" title="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" title="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" title="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" title="Threads">
+            <img src="icons/threads_.webp" alt="Threads" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
+          </a>
+          <a href="#" class="social-icon" title="Medium">
+            <img src="icons/medium_light.webp" alt="Medium" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease; mix-blend-mode: screen;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
+          </a>
+        </div>
 <div class="footer-bottom">
-                    <div class="footer-bottom-left">© 2026 vXr Holdings. All Rights Reserved.</div>
-                    <div class="footer-logo-bottom"></div>
-                    <button class="btn-back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-                        <span>Back to Top</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                            <path d="M12.05 9.62L8 13.67L3.95 9.62" stroke="currentColor" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8 2.33V13.55" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="footer-full-width-logo">
-                <img src="LOGO/footer-bg-removed-half.png" alt="vXr Holdings">
-            </div>
-        </footer>
+          <div class="footer-bottom-left">© 2026 vXr Holdings. All Rights Reserved.</div>
+          <div class="footer-logo-bottom"></div>
+          <button class="btn-back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <span>Back to Top</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+              <path d="M12.05 9.62L8 13.67L3.95 9.62" stroke="currentColor" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 2.33V13.55" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="footer-full-width-logo">
+        <img src="LOGO/footer-bg-removed-half.webp" alt="vXr Holdings" width="220" height="100" loading="lazy">
+      </div>
+    </footer>
 
-    <!-- ===== SCRIPTS ===== -->
-    </div> <!-- End of App Wrapper -->
+  <!-- ===== SCRIPTS ===== -->
+  </div> <!-- End of App Wrapper -->
 
-    <script>
-        // Page Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('pageLoader').classList.add('loaded');
-            }, 800);
-        });
+  <script>
+    // Page Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('pageLoader').classList.add('loaded');
+      }, 800);
+    });
 
 
-        // Dynamic Active Nav Link
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.navbar-links .nav-link, .mobile-menu .nav-link-mobile').forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-                    link.classList.add('active');
-                }
-            });
-        });
-                // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            
-            // Add scrolled class for background and padding changes
-            if (scrollY > 50) {
-                navbar.classList.add('scrolled');
+    // Dynamic Active Nav Link
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.navbar-links .nav-link, .mobile-menu .nav-link-mobile').forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        }
+      });
+    });
+        // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      
+      // Add scrolled class for background and padding changes
+      if (scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Auto-hide navigation on scroll down
+      if (scrollY > lastScroll && scrollY > 150) {
+        // Scrolling down - hide navbar
+        navbar.style.transform = 'translateY(-150%)';
+        navbar.style.opacity = '0';
+      } else {
+        // Scrolling up - show navbar
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.opacity = '1';
+      }
+
+      lastScroll = scrollY;
+    });
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    mobileClose.addEventListener('click', closeMobileMenu);
+
+    // Scroll reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Key cards animation
+    const keyCards = document.querySelectorAll('[data-key-card]');
+    const keyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 200);
+          keyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' });
+    keyCards.forEach(card => keyObserver.observe(card));
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 1600;
+          const startTime = performance.now();
+
+          // Also make parent .metric-value visible
+          const parent = counter.closest('.metric-value');
+          if (parent) {
+            parent.style.opacity = '1';
+            parent.style.transition = 'opacity 0.6s ease';
+          }
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(easeOut * target);
+            counter.textContent = current;
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
             } else {
-                navbar.classList.remove('scrolled');
+              counter.textContent = target;
             }
-
-            // Auto-hide navigation on scroll down
-            if (scrollY > lastScroll && scrollY > 150) {
-                // Scrolling down - hide navbar
-                navbar.style.transform = 'translateY(-150%)';
-                navbar.style.opacity = '0';
-            } else {
-                // Scrolling up - show navbar
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.opacity = '1';
-            }
-
-            lastScroll = scrollY;
-        });
-
-        // Mobile menu
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileClose = document.getElementById('mobileClose');
-
-        mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('open');
-            document.body.style.overflow = '';
+          }
+          requestAnimationFrame(updateCounter);
+          counterObserver.unobserve(counter);
         }
-        mobileClose.addEventListener('click', closeMobileMenu);
+      });
+    }, { threshold: 0, rootMargin: '0px 0px 50px 0px' });
+    counters.forEach(c => counterObserver.observe(c));
 
-        // Scroll reveal animations
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                } else {
-                    entry.target.classList.remove('visible');
-                }
-            });
-        }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+    // Portfolio slider with drag and arrows
+    const slider = document.getElementById('portfolioSlider');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const scrollbarThumb = document.getElementById('scrollbarThumb');
 
-        revealElements.forEach(el => revealObserver.observe(el));
+    if (slider) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
-        // Key cards animation
-        const keyCards = document.querySelectorAll('[data-key-card]');
-        const keyObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 200);
-                    keyObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0, rootMargin: '0px 0px 150px 0px' });
-        keyCards.forEach(card => keyObserver.observe(card));
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.style.cursor = 'grabbing';
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
 
-        // Counter animation
-        const counters = document.querySelectorAll('.counter');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const target = parseInt(counter.getAttribute('data-target'));
-                    const duration = 1600;
-                    const startTime = performance.now();
+      slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+      slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+      });
 
-                    // Also make parent .metric-value visible
-                    const parent = counter.closest('.metric-value');
-                    if (parent) {
-                        parent.style.opacity = '1';
-                        parent.style.transition = 'opacity 0.6s ease';
-                    }
+      // Scrollbar thumb update
+      function updateScrollbar() {
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        const progress = maxScroll > 0 ? slider.scrollLeft / maxScroll : 0;
+        const thumbWidth = 30; // percentage
+        const maxLeft = 100 - thumbWidth;
+        scrollbarThumb.style.left = (progress * maxLeft) + '%';
+      }
 
-                    function updateCounter(currentTime) {
-                        const elapsed = currentTime - startTime;
-                        const progress = Math.min(elapsed / duration, 1);
-                        // Ease out cubic
-                        const easeOut = 1 - Math.pow(1 - progress, 3);
-                        const current = Math.round(easeOut * target);
-                        counter.textContent = current;
-                        if (progress < 1) {
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    }
-                    requestAnimationFrame(updateCounter);
-                    counterObserver.unobserve(counter);
-                }
-            });
-        }, { threshold: 0, rootMargin: '0px 0px 50px 0px' });
-        counters.forEach(c => counterObserver.observe(c));
+      slider.addEventListener('scroll', updateScrollbar);
 
-        // Portfolio slider with drag and arrows
-        const slider = document.getElementById('portfolioSlider');
-        const prevBtn = document.getElementById('sliderPrev');
-        const nextBtn = document.getElementById('sliderNext');
-        const scrollbarThumb = document.getElementById('scrollbarThumb');
+      // Arrow navigation
+      const scrollAmount = 544;
+      prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
 
-        if (slider) {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                slider.style.cursor = 'grabbing';
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            });
-
-            slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
-            slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 1.5;
-                slider.scrollLeft = scrollLeft - walk;
-            });
-
-            // Scrollbar thumb update
-            function updateScrollbar() {
-                const maxScroll = slider.scrollWidth - slider.clientWidth;
-                const progress = maxScroll > 0 ? slider.scrollLeft / maxScroll : 0;
-                const thumbWidth = 30; // percentage
-                const maxLeft = 100 - thumbWidth;
-                scrollbarThumb.style.left = (progress * maxLeft) + '%';
-            }
-
-            slider.addEventListener('scroll', updateScrollbar);
-
-            // Arrow navigation
-            const scrollAmount = 544;
-            prevBtn.addEventListener('click', () => {
-                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            });
-            nextBtn.addEventListener('click', () => {
-                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            });
+    // Key background parallax
+    const keySection = document.querySelector('.section-key');
+    if (keySection) {
+      const keyImg = keySection.querySelector('.key-bg img');
+      window.addEventListener('scroll', () => {
+        const rect = keySection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const progress = 1 - (rect.top / window.innerHeight);
+          const scale = 0.85 + (progress * 0.15);
+          keyImg.style.transform = `scale(${Math.min(scale, 1)})`;
         }
+      });
+    }
 
-        // Key background parallax
-        const keySection = document.querySelector('.section-key');
-        if (keySection) {
-            const keyImg = keySection.querySelector('.key-bg img');
-            window.addEventListener('scroll', () => {
-                const rect = keySection.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const progress = 1 - (rect.top / window.innerHeight);
-                    const scale = 0.85 + (progress * 0.15);
-                    keyImg.style.transform = `scale(${Math.min(scale, 1)})`;
-                }
-            });
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
+      });
+    });
+  </script>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const offset = 80;
-                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+  <!-- Smooth Scrolling (Lenis) -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      direction: 'vertical', 
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    })
 
-    <!-- Smooth Scrolling (Lenis) -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <script>
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-            direction: 'vertical', 
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        })
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-    </script>
-    <script src="404-redirect.js"></script>
+    requestAnimationFrame(raf)
+  </script>
+  <script src="404-redirect.js"></script>
 </body>
 </html>
