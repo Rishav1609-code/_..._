@@ -603,7 +603,7 @@ body:has(.mobile-menu.open) .navbar-logo {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     overflow: hidden;
     border-radius: 60px 60px 0 0;
 }
@@ -2080,6 +2080,11 @@ body:has(.mobile-menu.open) .navbar-logo {
     }
     .container {
         padding: 0 var(--page-gap-side);
+    }
+    
+    /* Restore hero alignment for mobile */
+    .section-hero {
+        align-items: flex-end;
     }
     
     /* Hero Adjustments */
