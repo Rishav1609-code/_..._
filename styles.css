@@ -664,7 +664,7 @@ body:has(.mobile-menu.open) .navbar-logo {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 0 var(--page-gap-side);
+    padding: 120px var(--page-gap-side) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
