@@ -779,12 +779,11 @@ body:has(.mobile-menu.open) .navbar-logo {
     animation: heroFadeUp 0.7s 0.9s forwards cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.hero-right {
+.hero-right-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 32px;
-    opacity: 0;
 }
 
 .hero-stat-block {
@@ -2096,6 +2095,11 @@ body:has(.mobile-menu.open) .navbar-logo {
         padding: 120px 20px 40px;
         gap: 30px;
     }
+
+    .hero-right-container {
+        align-items: center;
+    }
+
     .hero-text-block-glass-split, .hero-text-block-glass {
         max-width: 100%;
         text-align: center;
