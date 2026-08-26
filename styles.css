@@ -580,6 +580,7 @@ body:has(.mobile-menu.open) .navbar-logo {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    border-radius: 60px 60px 0 0;
 }
 
 .section-sub-hero {
@@ -589,6 +590,7 @@ body:has(.mobile-menu.open) .navbar-logo {
     align-items: flex-end;
     overflow: hidden;
     padding-top: 120px;
+    border-radius: 60px 60px 0 0;
 }
 
 .section-sub-hero .hero-content {
@@ -1867,8 +1869,7 @@ body:has(.mobile-menu.open) .navbar-logo {
     background: var(--color-dark);
     color: var(--color-cream);
     padding: 80px 0 0;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    border-radius: 0 0 60px 60px;
 }
 
 .footer-grid {
