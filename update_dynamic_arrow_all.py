@@ -7,26 +7,24 @@ html_files = glob.glob(os.path.join(directory, "*.html"))
 
 new_arrow = """<span class="icon-arrow-dynamic">
                                 <span class="arrow-current">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 7h10v10"/>
+                                        <path d="M7 17 17 7"/>
                                     </svg>
                                 </span>
                                 <span class="arrow-next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 7h10v10"/>
+                                        <path d="M7 17 17 7"/>
                                     </svg>
                                 </span>
                             </span>"""
 
-# Regex to replace all <span class="icon-arrow"> ... </span>
-pattern = r'<span class="icon-arrow">[\s\S]*?</span>'
+# Regex to replace all <span class="icon-arrow-dynamic"> ... </span>
+pattern = r'<span class="icon-arrow-dynamic">[\s\S]*?</span>'
 
 for file_path in html_files:
-    if os.path.basename(file_path) == "index.html":
-        # Skip index.html since it was already updated perfectly
-        continue
+    # (Removed skip logic for index.html so all pages get the new arrow)
 
     with open(file_path, "r", encoding="utf-8") as f:
         html_content = f.read()

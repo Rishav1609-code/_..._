@@ -258,21 +258,44 @@ p {
     color: var(--color-cream) !important;
 }
 
-.btn .icon-arrow {
-    display: flex;
-    align-items: center;
-    width: 18px;
-    height: 18px;
-    transition: transform var(--transition-base);
+.btn .icon-arrow-dynamic {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 8px;
 }
 
-.btn:hover .icon-arrow {
-    transform: translateX(4px);
-}
-
-.btn .icon-arrow svg {
+.btn .icon-arrow-dynamic svg {
     width: 100%;
     height: 100%;
+    display: block;
+}
+
+.arrow-current, .arrow-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.arrow-next {
+    transform: translate(-100%, 100%);
+}
+
+.btn:hover .arrow-current {
+    transform: translate(100%, -100%);
+}
+
+.btn:hover .arrow-next {
+    transform: translate(0, 0);
 }
 
 .btn-link {
