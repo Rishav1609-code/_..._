@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>404 — Page Not Found | vXr Holdings</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Return to vXr Holdings."/>
+  <title>500 — Server Error | vXr Holdings</title>
+  <meta name="description" content="Something went wrong on our end. We're working to fix it. Return to vXr Holdings."/>
   <link rel="icon" type="image/png" href="LOGO/vXr_FAVICON_bg-r.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -98,7 +98,7 @@
     .error-nav-home:hover { color: #C4A882; }
     .error-nav-home svg { width: 16px; height: 16px; }
 
-    /* ===== Main 404 Section ===== */
+    /* ===== Main 500 Section ===== */
     .error-section {
       flex: 1;
       display: flex;
@@ -155,7 +155,7 @@
       max-width: 680px;
     }
 
-    /* Giant 404 number */
+    /* Giant 500 number */
     .error-code {
       font-family: 'Stack Sans Notch', 'Outfit', sans-serif;
       font-size: clamp(8rem, 20vw, 16rem);
@@ -172,9 +172,9 @@
       animation: errorCodeIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
     }
 
-    /* Subtle reflection under 404 */
+    /* Subtle reflection under 500 */
     .error-code::after {
-      content: '404';
+      content: '500';
       position: absolute;
       bottom: -40px;
       left: 0;
@@ -246,7 +246,7 @@
       animation: fadeSlideUp 0.7s ease 1s both;
     }
 
-    .btn-primary-404 {
+    .btn-primary-500 {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -263,8 +263,10 @@
       box-shadow: 0 8px 32px rgba(196,168,130,0.25);
       position: relative;
       overflow: hidden;
+      border: none;
+      cursor: pointer;
     }
-    .btn-primary-404::before {
+    .btn-primary-500::before {
       content: '';
       position: absolute;
       top: 0; left: -100%;
@@ -272,18 +274,18 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
       transition: left 0.5s ease;
     }
-    .btn-primary-404:hover::before { left: 100%; }
-    .btn-primary-404:hover {
+    .btn-primary-500:hover::before { left: 100%; }
+    .btn-primary-500:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 40px rgba(196,168,130,0.35);
     }
-    .btn-primary-404 svg {
+    .btn-primary-500 svg {
       width: 16px; height: 16px;
       transition: transform 0.3s ease;
     }
-    .btn-primary-404:hover svg { transform: translateX(-3px); }
+    .btn-primary-500:hover svg { transform: rotate(180deg); }
 
-    .btn-ghost-404 {
+    .btn-ghost-500 {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -299,16 +301,16 @@
       letter-spacing: 0.02em;
       transition: all 0.3s ease;
     }
-    .btn-ghost-404:hover {
+    .btn-ghost-500:hover {
       border-color: rgba(196,168,130,0.4);
       color: #C4A882;
       background: rgba(196,168,130,0.06);
     }
-    .btn-ghost-404 svg {
+    .btn-ghost-500 svg {
       width: 16px; height: 16px;
       transition: transform 0.3s ease;
     }
-    .btn-ghost-404:hover svg { transform: rotate(-45deg) scale(1.1); }
+    .btn-ghost-500:hover svg { transform: rotate(-45deg) scale(1.1); }
 
     /* Quick links row */
     .error-quick-links {
@@ -375,7 +377,7 @@
       .error-section { padding: 100px 24px 60px; }
       .error-footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
       .error-actions { flex-direction: column; }
-      .btn-primary-404, .btn-ghost-404 { width: 100%; justify-content: center; }
+      .btn-primary-500, .btn-ghost-500 { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -401,7 +403,7 @@
       </a>
     </nav>
 
-    <!-- 404 Content -->
+    <!-- 500 Content -->
     <section class="error-section">
       <!-- Floating Particles -->
       <div class="particle"></div>
@@ -412,17 +414,17 @@
       <div class="particle"></div>
 
       <div class="error-content">
-        <div class="error-code">404</div>
+        <div class="error-code">500</div>
         <div class="error-divider"></div>
-        <h1 class="error-title">This page doesn't exist</h1>
-        <p class="error-description">The page you are looking for might have been moved, deleted, or perhaps never existed. Let's get you back on track.</p>
+        <h1 class="error-title">Something went wrong</h1>
+        <p class="error-description">Our servers encountered an unexpected error. Our team has been notified and is working to resolve the issue. Please try again shortly.</p>
 
         <div class="error-actions">
-          <a href="index.html" class="btn-primary-404">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            Return Home
-          </a>
-          <a href="contact.html" class="btn-ghost-404">
+          <button onclick="location.reload()" class="btn-primary-500">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Try Again
+          </button>
+          <a href="contact.html" class="btn-ghost-500">
             Contact Us
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </a>

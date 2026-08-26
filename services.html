@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Ecosystem | vXr Holdings</title>
-  <meta name="description" content="vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow."/>
+  <meta name="description"
+    content="vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow." />
   <link rel="icon" type="image/png" href="LOGO/vXr_FAVICON_bg-r.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
     /* Page loader */
     .page-loader {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: #0F0F0F;
       z-index: 9999;
       display: flex;
@@ -23,12 +29,14 @@
       justify-content: center;
       transition: opacity 0.6s ease, visibility 0.6s ease;
     }
+
     .page-loader.loaded {
       opacity: 0;
       visibility: hidden;
     }
+
     .loader-logo {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Stack Sans Notch', 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 2.4rem;
       color: #FEFEFE;
@@ -37,466 +45,711 @@
       opacity: 0;
       animation: loaderPulse 1.2s ease-in-out infinite alternate;
     }
-    .loader-logo .logo-x { color: #C4A882; }
+
+    .loader-logo .logo-x {
+      color: #C4A882;
+    }
+
     @keyframes loaderPulse {
-      from { opacity: 0.3; }
-      to { opacity: 1; }
+      from {
+        opacity: 0.3;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
   </style>
+  <!-- Preload Service Images -->
+  <link rel="preload" as="image" href="services_pics/vXr_AppStudio.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Editions.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_FileForge.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Haven.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Infra.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Medico.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Nexus.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_Omni.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_OneLink.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_SafeDrop.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_TalentGrid.webp">
+  <link rel="preload" as="image" href="services_pics/vXr_WebSec.webp">
 </head>
+
 <body>
   <!-- Page Loader -->
   <div class="page-loader" id="pageLoader">
-    <div class="loader-logo" style="width: 220px; display: flex; justify-content: center; align-items: center;">
-      <img src="LOGO/vXr_bg_removed_LOGO.webp" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;" width="220" height="100">
+    <div class="loader-logo" style="width: 125px; display: flex; justify-content: center; align-items: center;">
+      <img decoding="async" src="LOGO/vXr_FAVICON_bg-r.webp" alt="vXr Holdings"
+        style="width: 100%; height: auto; object-fit: contain;">
     </div>
   </div>
 
   <!-- App Wrapper for Framed Look -->
   <div class="app-wrapper" role="main">
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar-wrapper">
-      <a href="index.html" class="navbar-logo" id="navLogo" style="display: flex; align-items: center; width: 140px; margin-top: -4px; margin-left: -20px;">
-        <img src="LOGO/vXr_bg_removed_LOGO.webp" alt="vXr Holdings" style="width: 100%; height: auto; object-fit: contain;" width="220" height="100">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link active">Our Ecosystem</a>
-        <a href="about.html" class="nav-link">About vXr</a>
-        <a href="investment-criteria.html" class="nav-link">Our Approach</a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-      </div>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">
-          <span>Get in Touch</span>
-          <span class="icon-arrow-dynamic">
-                <span class="arrow-current">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span class="arrow-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </span>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-wrapper">
+        <a href="index.html" class="navbar-logo" id="navLogo" style="display: flex; align-items: center; height: 80px;">
+          <img decoding="async" src="LOGO/vXr_FAVICON_bg-r.webp" alt="vXr Holdings"
+            style="height: 100%; width: auto; object-fit: contain;">
         </a>
-      </div>
-      <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
-        <path d="M12.83 1.17L1.17 12.83M1.17 1.17L12.83 12.83" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-      </svg>
-    </button>
-    <div class="mobile-menu-wrapper">
-      <div>
-        <a href="index.html" class="nav-link-mobile" onclick="closeMobileMenu()">Home</a>
-        <a href="services.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Ecosystem</a>
-          <a href="about.html" class="nav-link-mobile" onclick="closeMobileMenu()">About vXr</a>
-        <a href="investment-criteria.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Approach</a>
-        <a href="portfolio.html" class="nav-link-mobile" onclick="closeMobileMenu()">Portfolio</a>
-        <a href="contact.html" class="nav-link-mobile" onclick="closeMobileMenu()">Contact Us</a>
-      </div>
-      <div class="mobile-menu-bottom">
-        <a href="mailto:info@vxrholdings.com" class="mobile-contact-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" fill="none">
-            <path d="M5.87 0.03C7.34-0.01 8.79-0.01 10.25 0.03L10.3 0.03C11.44 0.06 12.36 0.08 13.1 0.21C13.87 0.34 14.5 0.6 15.03 1.13C15.55 1.66 15.81 2.28 15.94 3.04C16.07 3.76 16.09 4.66 16.11 5.77L16.11 5.82C16.13 6.57 16.13 7.31 16.11 8.06L16.11 8.1C16.09 9.21 16.07 10.11 15.94 10.83C15.81 11.59 15.55 12.21 15.03 12.74C14.5 13.27 13.87 13.53 13.1 13.67C12.36 13.79 11.44 13.82 10.3 13.85L10.25 13.85C8.79 13.88 7.34 13.88 5.87 13.85L5.83 13.85C4.68 13.82 3.76 13.79 3.03 13.67C2.26 13.53 1.63 13.27 1.1 12.74C0.57 12.21 0.31 11.59 0.18 10.83C0.06 10.11 0.04 9.21 0.01 8.1L0.01 8.06C-0.004 7.31-0.004 6.57 0.01 5.82L0.01 5.77C0.04 4.66 0.06 3.76 0.18 3.04C0.31 2.28 0.57 1.66 1.1 1.13C1.63 0.6 2.26 0.34 3.03 0.21C3.76 0.08 4.68 0.06 5.83 0.03L5.87 0.03ZM12.3 4.03C12.14 3.76 11.79 3.67 11.53 3.83L9.32 5.13C8.69 5.51 8.35 5.63 8.06 5.63C7.77 5.63 7.44 5.51 6.8 5.13L4.6 3.83C4.33 3.67 3.99 3.76 3.83 4.03C3.67 4.29 3.76 4.64 4.03 4.8L6.23 6.1C6.89 6.49 7.45 6.75 8.06 6.75C8.67 6.75 9.24 6.49 9.89 6.1L12.1 4.8C12.37 4.64 12.45 4.29 12.3 4.03Z" fill="currentColor"/>
-          </svg>
-          info@vxrholdings.com
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="mobile-contact-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" fill="none">
-            <path d="M5.81 0C8.1 0 10.27 1.39 11.18 3.57C12.03 5.6 11.57 7.34 10.62 8.81C9.84 10.03 8.69 11.12 7.67 12.09C7.49 12.26 7.32 12.42 7.15 12.59C6.79 12.93 6.31 13.13 5.81 13.13C5.32 13.13 4.84 12.93 4.48 12.59L4.48 12.59C4.3 12.41 4.11 12.23 3.92 12.05C2.91 11.09 1.78 10.02 1.01 8.81C0.06 7.34-0.4 5.61 0.44 3.57C1.35 1.39 3.52 0 5.81 0ZM5.81 3.56C4.57 3.56 3.56 4.57 3.56 5.81C3.56 7.06 4.57 8.06 5.81 8.06C7.05 8.06 8.06 7.06 8.06 5.81C8.06 4.57 7.05 3.56 5.81 3.56Z" fill="currentColor"/>
-            <path d="M1.31 13.13C1.7 13.13 2.02 13.42 2.06 13.81C2.07 13.82 2.09 13.84 2.13 13.87C2.26 13.98 2.5 14.1 2.87 14.22C3.59 14.46 4.63 14.63 5.81 14.63C7 14.63 8.04 14.46 8.76 14.22C9.12 14.1 9.36 13.98 9.49 13.87C9.53 13.84 9.55 13.82 9.57 13.81C9.6 13.42 9.92 13.13 10.31 13.13C10.73 13.13 11.06 13.46 11.06 13.88C11.06 14.41 10.74 14.8 10.42 15.05C10.1 15.3 9.68 15.5 9.23 15.65C8.32 15.95 7.11 16.13 5.81 16.13C4.51 16.13 3.3 15.95 2.39 15.65C1.94 15.5 1.52 15.3 1.2 15.05C0.89 14.8 0.56 14.41 0.56 13.88C0.56 13.46 0.9 13.13 1.31 13.13Z" fill="currentColor"/>
-          </svg>
-          Champaran, Bihar, INDIA
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Page Content -->
-  <div id="top">
-
-    <!-- ===== SERVICES HERO ===== -->
-    <section class="section-hero" id="hero" style="min-height: 60vh;">
-      <div class="hero-bg">
-        <img src="images/FOR_our_service.webp" alt="Services Background" style="width: 100%; height: 100%; object-fit: cover;">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-text-block" style="text-align: center; max-width: 800px; margin: 0 auto;">
-          <h1 class="hero-title reveal">Next-Generation Platforms</h1>
-          <p class="hero-subtitle reveal reveal-delay-1" style="font-size: 1.25rem; margin-left: auto; margin-right: auto;">From secure data management and professional networking to universal mobility and healthcare, we deliver thoroughly vetted, highly secure tech solutions you can trust.</p>
+        <div class="navbar-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link active">Our Ecosystem</a>
+          <a href="about.html" class="nav-link">About vXr</a>
+          <a href="investment-criteria.html" class="nav-link">Our Approach</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
         </div>
-      </div>
-    </section>
-
-        <!-- ===== SERVICE SHOWCASE ===== -->
-    <section class="section-service-showcase">
-      <div class="container">
-
-        <!-- Service 1 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_WebSec.webp" alt="vXr_WebSec">
-          </div>
-          <div class="service-content">
-            <h2>vXr_WebSec</h2>
-            <p style="margin-bottom: 16px; font-weight: 500; color: var(--color-brown-dark);">Architecting the Modern Web, Tailored to Your Vision.</p>
-            <p style="margin-bottom: 16px;">We engineer high-performance, inherently secure, and fully customized web infrastructure tailored to your exact vision—without compromising on affordability.</p>
-            <ul style="color: var(--color-grey); font-size: 1.15rem; line-height: 1.6; margin-bottom: 32px; padding-left: 20px; list-style-type: disc;">
-              <li style="margin-bottom: 8px;">Purpose-built interfaces and intuitive digital journeys engineered specifically for your target audience.</li>
-              <li style="margin-bottom: 8px;">Hardened architecture and continuous vulnerability mitigation to secure your digital assets from day one.</li>
-              <li>Lightning-fast, highly scalable web solutions that adapt seamlessly as your business expands.</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">
-              <span>Contact Us</span>
-              <span class="icon-arrow-dynamic">
-                <span class="arrow-current">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span class="arrow-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Editions.webp" alt="vXr_Editions">
-          </div>
-          <div class="service-content">
-            <h2>vXr_Editions</h2>
-            <p style="margin-bottom: 16px; font-weight: 500; color: var(--color-brown-dark);">Bring Your Digital PDFs to Life.</p>
-            <p style="margin-bottom: 16px;">Transform your digital documents into beautiful, physical books. We offer premium binding and custom sizing—all at an unbeatable, affordable price.</p>
-            <ul style="color: var(--color-grey); font-size: 1.15rem; line-height: 1.6; margin-bottom: 32px; padding-left: 20px; list-style-type: disc;">
-              <li style="margin-bottom: 8px;">Choose from four professional book sizes to perfectly match your reading style and specific needs.</li>
-              <li style="margin-bottom: 8px;">Premium physical quality that doesn't break the bank, ensuring your favourite reads are always accessible.</li>
-              <li style="margin-bottom: 8px;">Simply upload your file, and we will print, bind, and ship your custom book directly to your door.</li>
-              <li>The composition highlights the tangible result—a beautifully crafted book—appealing to the customer's interest in holding their favourite reads.</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">
-              <span>Contact Us</span>
-              <span class="icon-arrow-dynamic">
-                <span class="arrow-current">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span class="arrow-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_AppStudio.webp" alt="vXr_AppStudio">
-          </div>
-          <div class="service-content">
-            <h2>vXr_AppStudio</h2>
-            <p style="margin-bottom: 16px; font-weight: 500; color: var(--color-brown-dark);">Your Vision, Engineered for Mobile.</p>
-            <p style="margin-bottom: 16px;">We build powerful, highly secure, and custom-tailored mobile applications for iOS and Android, designed exactly around your unique business goals.</p>
-            <ul style="color: var(--color-grey); font-size: 1.15rem; line-height: 1.6; margin-bottom: 32px; padding-left: 20px; list-style-type: disc;">
-              <li style="margin-bottom: 8px;">Built entirely around your blueprint, translating your insights into a frictionless, engaging user experience.</li>
-              <li style="margin-bottom: 8px;">Backed by expert digital defense, featuring secure authentication and robust architecture to protect your users' data.</li>
-              <li style="margin-bottom: 8px;">Rigorously tested across all devices to ensure a lightning-fast, crash-free application that seamlessly scales with you.</li>
-              <li>The composition should feel vibrant and collaborative, emphasizing that you build apps with the customer to match their unique interests.</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">
-              <span>Contact Us</span>
-              <span class="icon-arrow-dynamic">
-                <span class="arrow-current">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span class="arrow-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Nexus.webp" alt="vXr_Nexus">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_Nexus_bg_r.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_Nexus</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 4 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_OneLink.webp" alt="vXr_OneLink">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_OneLink_bg_r.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_OneLink</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 5 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_TalentGrid.webp" alt="vXr_TalentGrid">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_TalentGrid_bg_R.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_TalentGrid</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 6 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 7 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_SafeDrop.webp" alt="vXr_SafeDrop">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_SafeDrop-bg-r.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_SafeDrop</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 7 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 8 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_FileForge.webp" alt="vXr_FileForge">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_FileForge_bg_R.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_FileForge</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 8 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 9 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Haven.webp" alt="vXr_Haven">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_Haven_bg_R.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_Haven</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 9 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 10 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Omni.webp" alt="vXr_Omni">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/Xr_Omni_bg_R.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_Omni</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 10 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 11 -->
-        <div class="service-row reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Medico.webp" alt="vXr_Medico">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_Medico-bg-r.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_Medico</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 11 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 12 -->
-        <div class="service-row reverse reveal">
-          <div class="service-img-wrapper">
-            <img src="services_pics/vXr_Infra.webp" alt="vXr_Infra">
-            <div class="glass-mirror-overlay">
-              <img src="services_logos/vXr_Infra_bg_R.webp" alt="Service Logo" class="service-logo-centered">
-            </div>
-          </div>
-          <div class="service-content">
-            <h2>vXr_Infra</h2>
-            <div class="coming-soon-wrapper">
-              <p>Detailed description of service number 12 goes here. This text explains the specific value proposition, operational methodologies, and expected outcomes that clients can anticipate. Replace this placeholder text with your actual service details.</p>
-            <a href="#contact" class="btn btn-outline" style="border-color: rgba(45, 31, 23, 0.2); color: var(--color-brown-dark);">Learn More</a>
-              <div class="coming-soon-overlay">
-                <span class="coming-soon-text">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== IMAGE LOGO TICKER ===== -->
-    <section class="section-logos section-logos-dark">
-      <div class="ticker-wrapper ticker-reverse">
-        <div class="ticker-content">
-          <img src="services_logos/vXr_AppStudio_bg_R.webp" alt="AppStudio" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Editions_bg_R.webp" alt="Editions" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_FileForge_bg_R.webp" alt="FileForge" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Haven_bg_R.webp" alt="Haven" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Infra_bg_R.webp" alt="Infra" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Medico-bg-r.webp" alt="Medico" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Nexus_bg_r.webp" alt="Nexus" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_OneLink_bg_r.webp" alt="OneLink" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_SafeDrop-bg-r.webp" alt="SafeDrop" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_TalentGrid_bg_R.webp" alt="TalentGrid" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_WebSec_bg_R.webp" alt="WebSec" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/Xr_Omni_bg_R.webp" alt="Omni" class="ticker-img" width="150" height="50" loading="lazy">
-        </div>
-        <div class="ticker-content" aria-hidden="true">
-          <img src="services_logos/vXr_AppStudio_bg_R.webp" alt="AppStudio" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Editions_bg_R.webp" alt="Editions" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_FileForge_bg_R.webp" alt="FileForge" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Haven_bg_R.webp" alt="Haven" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Infra_bg_R.webp" alt="Infra" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Medico-bg-r.webp" alt="Medico" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_Nexus_bg_r.webp" alt="Nexus" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_OneLink_bg_r.webp" alt="OneLink" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_SafeDrop-bg-r.webp" alt="SafeDrop" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_TalentGrid_bg_R.webp" alt="TalentGrid" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/vXr_WebSec_bg_R.webp" alt="WebSec" class="ticker-img" width="150" height="50" loading="lazy">
-          <img src="services_logos/Xr_Omni_bg_R.webp" alt="Omni" class="ticker-img" width="150" height="50" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA SECTION ===== -->
-      <section class="section-cta" id="contact">
-        <div class="cta-bg">
-          <img src="images/vXr_lets-connect.webp" alt="City skyline" />
-          <div class="overlay"></div>
-        </div>
-        <div class="container cta-content">
-          <h2 class="reveal">Let's Connect</h2>
-          <a href="contact.html" class="btn btn-primary reveal reveal-delay-1">
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">
             <span>Get in Touch</span>
             <span class="icon-arrow-dynamic">
               <span class="arrow-current">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
               <span class="arrow-next">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+          <path d="M12.83 1.17L1.17 12.83M1.17 1.17L12.83 12.83" stroke="currentColor" stroke-width="1.25"
+            stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="mobile-menu-wrapper">
+        <div>
+          <a href="index.html" class="nav-link-mobile" onclick="closeMobileMenu()">Home</a>
+          <a href="services.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Ecosystem</a>
+          <a href="about.html" class="nav-link-mobile" onclick="closeMobileMenu()">About vXr</a>
+          <a href="investment-criteria.html" class="nav-link-mobile" onclick="closeMobileMenu()">Our Approach</a>
+          <a href="portfolio.html" class="nav-link-mobile" onclick="closeMobileMenu()">Portfolio</a>
+          <a href="contact.html" class="nav-link-mobile" onclick="closeMobileMenu()">Contact Us</a>
+        </div>
+        <div class="mobile-menu-bottom">
+          <a href="mailto:info@vxrholdings.com" class="mobile-contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" fill="none">
+              <path
+                d="M5.87 0.03C7.34-0.01 8.79-0.01 10.25 0.03L10.3 0.03C11.44 0.06 12.36 0.08 13.1 0.21C13.87 0.34 14.5 0.6 15.03 1.13C15.55 1.66 15.81 2.28 15.94 3.04C16.07 3.76 16.09 4.66 16.11 5.77L16.11 5.82C16.13 6.57 16.13 7.31 16.11 8.06L16.11 8.1C16.09 9.21 16.07 10.11 15.94 10.83C15.81 11.59 15.55 12.21 15.03 12.74C14.5 13.27 13.87 13.53 13.1 13.67C12.36 13.79 11.44 13.82 10.3 13.85L10.25 13.85C8.79 13.88 7.34 13.88 5.87 13.85L5.83 13.85C4.68 13.82 3.76 13.79 3.03 13.67C2.26 13.53 1.63 13.27 1.1 12.74C0.57 12.21 0.31 11.59 0.18 10.83C0.06 10.11 0.04 9.21 0.01 8.1L0.01 8.06C-0.004 7.31-0.004 6.57 0.01 5.82L0.01 5.77C0.04 4.66 0.06 3.76 0.18 3.04C0.31 2.28 0.57 1.66 1.1 1.13C1.63 0.6 2.26 0.34 3.03 0.21C3.76 0.08 4.68 0.06 5.83 0.03L5.87 0.03ZM12.3 4.03C12.14 3.76 11.79 3.67 11.53 3.83L9.32 5.13C8.69 5.51 8.35 5.63 8.06 5.63C7.77 5.63 7.44 5.51 6.8 5.13L4.6 3.83C4.33 3.67 3.99 3.76 3.83 4.03C3.67 4.29 3.76 4.64 4.03 4.8L6.23 6.1C6.89 6.49 7.45 6.75 8.06 6.75C8.67 6.75 9.24 6.49 9.89 6.1L12.1 4.8C12.37 4.64 12.45 4.29 12.3 4.03Z"
+                fill="currentColor" />
+            </svg>
+            info@vxrholdings.com
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer"
+            class="mobile-contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" fill="none">
+              <path
+                d="M5.81 0C8.1 0 10.27 1.39 11.18 3.57C12.03 5.6 11.57 7.34 10.62 8.81C9.84 10.03 8.69 11.12 7.67 12.09C7.49 12.26 7.32 12.42 7.15 12.59C6.79 12.93 6.31 13.13 5.81 13.13C5.32 13.13 4.84 12.93 4.48 12.59L4.48 12.59C4.3 12.41 4.11 12.23 3.92 12.05C2.91 11.09 1.78 10.02 1.01 8.81C0.06 7.34-0.4 5.61 0.44 3.57C1.35 1.39 3.52 0 5.81 0ZM5.81 3.56C4.57 3.56 3.56 4.57 3.56 5.81C3.56 7.06 4.57 8.06 5.81 8.06C7.05 8.06 8.06 7.06 8.06 5.81C8.06 4.57 7.05 3.56 5.81 3.56Z"
+                fill="currentColor" />
+              <path
+                d="M1.31 13.13C1.7 13.13 2.02 13.42 2.06 13.81C2.07 13.82 2.09 13.84 2.13 13.87C2.26 13.98 2.5 14.1 2.87 14.22C3.59 14.46 4.63 14.63 5.81 14.63C7 14.63 8.04 14.46 8.76 14.22C9.12 14.1 9.36 13.98 9.49 13.87C9.53 13.84 9.55 13.82 9.57 13.81C9.6 13.42 9.92 13.13 10.31 13.13C10.73 13.13 11.06 13.46 11.06 13.88C11.06 14.41 10.74 14.8 10.42 15.05C10.1 15.3 9.68 15.5 9.23 15.65C8.32 15.95 7.11 16.13 5.81 16.13C4.51 16.13 3.3 15.95 2.39 15.65C1.94 15.5 1.52 15.3 1.2 15.05C0.89 14.8 0.56 14.41 0.56 13.88C0.56 13.46 0.9 13.13 1.31 13.13Z"
+                fill="currentColor" />
+            </svg>
+            Champaran, Bihar, INDIA
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="top">
+
+      <!-- ===== SERVICES HERO ===== -->
+      <section class="section-hero" id="hero" style="min-height: 100vh; padding-top: 120px; align-items: center;">
+        <div class="hero-bg">
+          <img decoding="async" src="images/FOR_our_service.webp" alt="Services Background"
+            style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text-block-glass">
+            <h1 class="hero-title">Next-Generation Platforms</h1>
+            <p class="hero-subtitle">From secure data
+              management and professional networking to universal mobility and healthcare, we deliver thoroughly vetted,
+              highly secure tech solutions you can trust.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICE SHOWCASE ===== -->
+      <section class="section-service-showcase">
+        <div class="container">
+
+          <!-- Service 1 -->
+          <div class="service-row">
+            <div class="service-img-wrapper">
+              <img decoding="async" loading="eager" fetchpriority="high" src="services_pics/vXr_WebSec.webp"
+                alt="Interface showing advanced web security analytics and encryption for vXr WebSec">
+            </div>
+            <div class="service-content">
+              <h2>vXr WebSec</h2>
+              <p class="svc-lead">Architecting the Modern Web, Tailored to Your Vision.</p>
+              <p class="svc-desc">We engineer high-performance, inherently secure, and fully customized web
+                infrastructure tailored to your exact vision—without compromising on affordability.</p>
+              <ul class="svc-list">
+                <li>Purpose-built interfaces and intuitive digital journeys engineered
+                  specifically for your target audience.</li>
+                <li>Hardened architecture and continuous vulnerability mitigation to secure
+                  your digital assets from day one.</li>
+                <li>Lightning-fast, highly scalable web solutions that adapt seamlessly as your business expands.</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline svc-btn">
+                <span>Contact Us</span>
+                <span class="icon-arrow-dynamic">
+                  <span class="arrow-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span class="arrow-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-row reverse">
+            <div class="service-img-wrapper">
+              <img decoding="async" loading="eager" fetchpriority="high" src="services_pics/vXr_Editions.webp"
+                alt="User interface displaying digital editions and publishing layout for vXr Editions">
+            </div>
+            <div class="service-content">
+              <h2>vXr Editions</h2>
+              <p class="svc-lead">Bring Your Digital PDFs to Life.</p>
+              <p class="svc-desc">Transform your digital documents into beautiful, physical books. We offer
+                premium binding and custom sizing—all at an unbeatable, affordable price.</p>
+              <ul class="svc-list">
+                <li>Choose from four professional book sizes to perfectly match your reading
+                  style and specific needs.</li>
+                <li>Premium physical quality that doesn't break the bank, ensuring your
+                  favourite reads are always accessible.</li>
+                <li>Simply upload your file, and we will print, bind, and ship your custom
+                  book directly to your door.</li>
+                <li>The composition highlights the tangible result—a beautifully crafted book—appealing to the
+                  customer's interest in holding their favourite reads.</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline svc-btn">
+                <span>Contact Us</span>
+                <span class="icon-arrow-dynamic">
+                  <span class="arrow-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span class="arrow-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-row">
+            <div class="service-img-wrapper">
+              <img decoding="async" loading="eager" fetchpriority="high" src="services_pics/vXr_AppStudio.webp"
+                alt="Mobile app development dashboard and design studio for vXr AppStudio">
+            </div>
+            <div class="service-content">
+              <h2>vXr AppStudio</h2>
+              <p class="svc-lead">Your Vision, Engineered for Mobile.</p>
+              <p class="svc-desc">We build powerful, highly secure, and custom-tailored mobile applications
+                for iOS and Android, designed exactly around your unique business goals.</p>
+              <ul class="svc-list">
+                <li>Built entirely around your blueprint, translating your insights into a
+                  frictionless, engaging user experience.</li>
+                <li>Backed by expert digital defense, featuring secure authentication and
+                  robust architecture to protect your users' data.</li>
+                <li>Rigorously tested across all devices to ensure a lightning-fast,
+                  crash-free application that seamlessly scales with you.</li>
+                <li>The composition should feel vibrant and collaborative, emphasizing that you build apps with the
+                  customer to match their unique interests.</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline svc-btn">
+                <span>Contact Us</span>
+                <span class="icon-arrow-dynamic">
+                  <span class="arrow-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span class="arrow-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                      <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== UPCOMING SERVICES 3D CAROUSEL ===== -->
+      <section class="section-services-carousel" id="upcoming-services">
+        <style>
+          .section-services-carousel {
+            padding: 80px 0 100px;
+            background: var(--color-cream-light);
+            overflow: hidden;
+            position: relative;
+          }
+          .services-carousel-header {
+            text-align: center;
+            margin-bottom: 56px;
+          }
+          .services-carousel-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: var(--color-brown);
+            margin-bottom: 8px;
+          }
+          .services-carousel-header p {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--color-grey);
+            letter-spacing: 0.06em;
+          }
+
+          /* Wrapper */
+          .svc-carousel-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+          }
+
+          /* Stage — fixed height, cards positioned from center */
+          .svc-carousel-stage {
+            position: relative;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          /* Base card — all cards start invisible and centered */
+          .svc-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 240px;
+            height: 300px;
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 30px 22px;
+            text-decoration: none;
+            overflow: hidden;
+            /* Default hidden state */
+            transform: translateX(-50%) translateY(-50%) scale(0.7);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+            will-change: transform, opacity, filter;
+            transition:
+              transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity   0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              filter    0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.5s ease;
+            /* Light glass base */
+            background: rgba(255, 255, 255, 0.55);
+            border: 1.5px solid rgba(78, 57, 46, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+          }
+          .svc-card img {
+            height: 90px;
+            width: auto;
+            max-width: 85%;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(0.3);
+            transition: filter 0.4s ease;
+          }
+          .svc-card__name {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(78, 57, 46, 0.55);
+          }
+          .svc-card__tag {
+            font-family: var(--font-body);
+            font-size: 0.58rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 50px;
+            background: rgba(78, 57, 46, 0.08);
+            color: var(--color-brown);
+          }
+
+          /* ============================================
+             3-CARD VISIBLE LAYOUT
+             Only pos -1, 0, +1 are visible.
+             All others remain opacity:0 / hidden.
+          ============================================ */
+
+          /* CENTER card — straight up, dark glassy, prominent */
+          .svc-card[data-pos="0"] {
+            transform: translateX(-50%) translateY(-50%) scale(1.15);
+            opacity: 1;
+            z-index: 5;
+            pointer-events: auto;
+            cursor: default;
+            /* Dark frosted glass — matches navbar style */
+            background: linear-gradient(160deg, rgba(78, 57, 46, 0.58) 0%, rgba(78, 57, 46, 0.80) 100%);
+            border-color: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+              0 30px 70px rgba(78, 57, 46, 0.24),
+              inset 0 1px 0 rgba(255, 255, 255, 0.35),
+              inset 0 0 40px rgba(255, 255, 255, 0.04);
+          }
+          .svc-card[data-pos="0"] img       { filter: grayscale(100%) brightness(10); }
+          .svc-card[data-pos="0"] .svc-card__name { color: rgba(255, 255, 255, 0.82); }
+          .svc-card[data-pos="0"] .svc-card__tag  { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85); }
+
+          /* RIGHT card — slight tilt + offset, light frosted glass */
+          .svc-card[data-pos="1"] {
+            transform: translateX(calc(-50% + 220px)) translateY(calc(-50% + 30px)) rotate(18deg) scale(0.88);
+            opacity: 0.85;
+            z-index: 4;
+            pointer-events: auto;
+            cursor: pointer;
+            filter: blur(0.5px);
+            /* Light frosted glass */
+            background: linear-gradient(160deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.3) 100%);
+            border-color: rgba(78, 57, 46, 0.14);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 40px rgba(78, 57, 46, 0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+          }
+
+          /* LEFT card — mirror of right */
+          .svc-card[data-pos="-1"] {
+            transform: translateX(calc(-50% - 220px)) translateY(calc(-50% + 30px)) rotate(-18deg) scale(0.88);
+            opacity: 0.85;
+            z-index: 4;
+            pointer-events: auto;
+            cursor: pointer;
+            filter: blur(0.5px);
+            background: linear-gradient(160deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.3) 100%);
+            border-color: rgba(78, 57, 46, 0.14);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 40px rgba(78, 57, 46, 0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+          }
+
+          /* ALL OTHER POSITIONS — completely hidden */
+          .svc-card[data-pos="2"],
+          .svc-card[data-pos="-2"],
+          .svc-card[data-pos="3"],
+          .svc-card[data-pos="-3"],
+          .svc-card[data-pos="4"],
+          .svc-card[data-pos="-4"] {
+            transform: translateX(-50%) translateY(-50%) scale(0.5);
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+          }
+
+          /* Navigation */
+          .svc-carousel-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 36px;
+          }
+          .svc-carousel-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(78, 57, 46, 0.22);
+            background: transparent;
+            color: var(--color-brown);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+          }
+          .svc-carousel-btn:hover {
+            background: var(--color-brown);
+            border-color: var(--color-brown);
+            color: #fff;
+          }
+          .svc-carousel-dots { display: flex; gap: 8px; }
+          .svc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(78, 57, 46, 0.18);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          .svc-dot.active {
+            width: 24px;
+            border-radius: 10px;
+            background: var(--color-brown);
+          }
+
+          /* Decorative arc — two concentric rings at bottom, matching reference */
+          .svc-carousel-arc {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 640px;
+            height: 320px;
+            z-index: 0;
+            pointer-events: none;
+          }
+          .svc-carousel-arc::before,
+          .svc-carousel-arc::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border: 1.5px solid rgba(78, 57, 46, 0.10);
+            border-bottom: none;
+          }
+          .svc-carousel-arc::before {
+            width: 640px;
+            height: 320px;
+          }
+          .svc-carousel-arc::after {
+            width: 480px;
+            height: 240px;
+            border-color: rgba(78, 57, 46, 0.07);
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .svc-card { transition: none; }
+          }
+          @media (max-width: 768px) {
+            .svc-carousel-stage { height: 320px; }
+            .svc-card { width: 200px; height: 250px; }
+            .svc-card img { height: 70px; }
+            .svc-card[data-pos="1"]  { transform: translateX(calc(-50% + 160px)) translateY(calc(-50% + 25px)) rotate(18deg) scale(0.85); }
+            .svc-card[data-pos="-1"] { transform: translateX(calc(-50% - 160px)) translateY(calc(-50% + 25px)) rotate(-18deg) scale(0.85); }
+        </style>
+
+
+        <div class="container">
+          <div class="services-carousel-header">
+            <h2>Upcoming Services</h2>
+            <p>Expanding our ecosystem with new innovations</p>
+          </div>
+
+          <div class="svc-carousel-wrapper">
+            <div class="svc-carousel-arc"></div>
+            <div class="svc-carousel-stage" id="svcCarouselStage">
+
+              <div class="svc-card" data-pos="0">
+                <img src="services_logos/vXr_FileForge_bg_R.webp" alt="vXr FileForge">
+                <span class="svc-card__name">FileForge</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="1">
+                <img src="services_logos/vXr_Haven_bg_R.webp" alt="vXr Haven">
+                <span class="svc-card__name">Haven</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="2">
+                <img src="services_logos/vXr_Infra_bg_R.webp" alt="vXr Infra">
+                <span class="svc-card__name">Infra</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="-1">
+                <img src="services_logos/vXr_Medico-bg-r.webp" alt="vXr Medico">
+                <span class="svc-card__name">Medico</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="-2">
+                <img src="services_logos/vXr_Nexus_bg_r.webp" alt="vXr Nexus">
+                <span class="svc-card__name">Nexus</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="3">
+                <img src="services_logos/vXr_OneLink_bg_r.webp" alt="vXr OneLink">
+                <span class="svc-card__name">OneLink</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="-3">
+                <img src="services_logos/vXr_SafeDrop-bg-r.webp" alt="vXr SafeDrop">
+                <span class="svc-card__name">SafeDrop</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="4">
+                <img src="services_logos/vXr_TalentGrid_bg_R.webp" alt="vXr TalentGrid">
+                <span class="svc-card__name">TalentGrid</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+              <div class="svc-card" data-pos="-4">
+                <img src="services_logos/Xr_Omni_bg_R.webp" alt="vXr Omni">
+                <span class="svc-card__name">Omni</span>
+                <span class="svc-card__tag">Coming Soon</span>
+              </div>
+
+            </div>
+
+            <div class="svc-carousel-nav">
+              <button class="svc-carousel-btn" id="svcPrev" aria-label="Previous service">←</button>
+              <div class="svc-carousel-dots" id="svcDots"></div>
+              <button class="svc-carousel-btn" id="svcNext" aria-label="Next service">→</button>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        (function() {
+          const stage = document.getElementById('svcCarouselStage');
+          const cards = Array.from(stage.querySelectorAll('.svc-card'));
+          const dotsWrap = document.getElementById('svcDots');
+          const total = cards.length;
+          let activeIndex = 0;
+
+          // Create dots
+          cards.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('svc-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', 'Go to service ' + (i + 1));
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+          });
+
+          function updateCarousel() {
+            cards.forEach((card, i) => {
+              let pos = i - activeIndex;
+              if (pos > Math.floor(total / 2)) pos -= total;
+              if (pos < -Math.floor(total / 2)) pos += total;
+              card.setAttribute('data-pos', String(pos));
+            });
+            const dots = dotsWrap.querySelectorAll('.svc-dot');
+            dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+          }
+
+          function goTo(index) {
+            activeIndex = ((index % total) + total) % total;
+            updateCarousel();
+          }
+
+          document.getElementById('svcPrev').addEventListener('click', () => goTo(activeIndex - 1));
+          document.getElementById('svcNext').addEventListener('click', () => goTo(activeIndex + 1));
+
+          // Click on side card to navigate
+          cards.forEach((card, i) => {
+            card.addEventListener('click', () => {
+              if (i !== activeIndex) goTo(i);
+            });
+          });
+
+          // Keyboard support
+          stage.setAttribute('tabindex', '0');
+          stage.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') goTo(activeIndex - 1);
+            if (e.key === 'ArrowRight') goTo(activeIndex + 1);
+          });
+
+          // Touch/swipe support
+          let touchStartX = 0;
+          stage.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+          stage.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) {
+              diff > 0 ? goTo(activeIndex + 1) : goTo(activeIndex - 1);
+            }
+          }, { passive: true });
+
+          updateCarousel();
+        })();
+        </script>
+      </section>
+
+      <!-- ===== CTA SECTION ===== -->
+      <section class="section-cta" id="contact">
+        <div class="cta-bg">
+          <img decoding="async" src="images/vXr_lets-connect.webp" alt="City skyline" />
+          <div class="overlay"></div>
+        </div>
+        <div class="container cta-content">
+          <h2 class="">Let's Connect</h2>
+          <a href="contact.html" class="btn btn-primary">
+            <span>Get in Touch</span>
+            <span class="icon-arrow-dynamic">
+              <span class="arrow-current">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="arrow-next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                  <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
             </span>
@@ -506,29 +759,30 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-grid">
           <div>
-            <p class="footer-description">vXr Holdings develops next-generation, security-first platforms—seamlessly connecting digital innovation with the physical infrastructure of tomorrow.</p>
+            <p class="footer-description">vXr Holdings develops next-generation, security-first platforms—seamlessly
+              connecting digital innovation with the physical infrastructure of tomorrow.</p>
             <a href="contact.html" class="btn btn-outline"
               style="color: var(--color-cream); border-color: rgba(241,232,217,0.3);">
               <span>Get in Touch</span>
               <span class="icon-arrow-dynamic">
                 <span class="arrow-current">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
                 <span class="arrow-next">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5"
-                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
-                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.5 3.5h6v6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
               </span>
@@ -550,46 +804,58 @@
           <div>
             <div class="footer-col-title">Contact</div>
             <a href="mailto:info@vxrholdings.com" class="footer-link-item">info@vxrholdings.com</a>
-            <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer" class="footer-link-item">Champaran, Bihar, INDIA</a>
+            <a href="https://en.wikipedia.org/wiki/Champaran" target="_blank" rel="noopener noreferrer"
+              class="footer-link-item">Champaran, Bihar, INDIA</a>
           </div>
         </div>
         <div class="footer-giant-logo-container">
-</div>
-        
+        </div>
+
         <div class="footer-socials">
           <a href="#" class="social-icon" title="LinkedIn">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
           </a>
           <a href="#" class="social-icon" title="X (Twitter)">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="transform: scale(1.15);">
+              <path
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
             </svg>
           </a>
           <a href="#" class="social-icon" title="YouTube">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="transform: scale(1.1);">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
           </a>
           <a href="#" class="social-icon" title="Facebook">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
             </svg>
           </a>
           <a href="#" class="social-icon" title="Instagram">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="transform: scale(1.05);">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
             </svg>
           </a>
           <a href="#" class="social-icon" title="Threads">
-            <img src="icons/threads_.webp" alt="Threads" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
+            <img decoding="async" src="icons/threads_.webp" alt="Threads"
+              style="width: 25px; height: 25px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease;"
+              onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'"
+              onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
           </a>
           <a href="#" class="social-icon" title="Medium">
-            <img src="icons/medium_light.webp" alt="Medium" style="width: 20px; height: 20px; object-fit: contain; filter: contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5); opacity: 0.7; transition: all 0.3s ease; mix-blend-mode: screen;" onmouseover="this.style.opacity='1'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(2) saturate(0.5)'" onmouseout="this.style.opacity='0.7'; this.style.filter='contrast(0) sepia(1) hue-rotate(15deg) brightness(1.5) saturate(0.5)'" />
+            <svg viewBox="0 0 1043.63 592.71" width="20" height="20" fill="currentColor" style="transform: scale(1.1);">
+              <path
+                d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" />
+            </svg>
           </a>
         </div>
-<div class="footer-bottom">
+        <div class="footer-bottom">
           <div class="footer-bottom-left">© 2026 vXr Holdings. All Rights Reserved.</div>
           <div class="footer-logo-bottom"></div>
           <button class="btn-back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
@@ -604,11 +870,12 @@
         </div>
       </div>
       <div class="footer-full-width-logo">
-        <img src="LOGO/footer-bg-removed-half.webp" alt="vXr Holdings" width="220" height="100" loading="lazy">
+        <img decoding="async" src="LOGO/footer-bg-r_h-d-half.webp" alt="vXr Holdings" width="220" height="100"
+          loading="eager">
       </div>
     </footer>
 
-  <!-- ===== SCRIPTS ===== -->
+    <!-- ===== SCRIPTS ===== -->
   </div> <!-- End of App Wrapper -->
 
   <script>
@@ -616,7 +883,8 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('pageLoader').classList.add('loaded');
-      }, 800);
+        document.dispatchEvent(new Event('loaderFinished'));
+      }, 400);
     });
 
 
@@ -631,12 +899,12 @@
         }
       });
     });
-        // Navbar scroll effect
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
-      
+
       // Add scrolled class for background and padding changes
       if (scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -674,19 +942,20 @@
     }
     mobileClose.addEventListener('click', closeMobileMenu);
 
-    // Scroll reveal animations
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
+    // Scroll animations
+    constElements = document.querySelectorAll('.');
+    constObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
+          entry.target.classList.add('visible'); Observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    document.addEventListener('loaderFinished', () => {
+      Elements.forEach(el => Observer.observe(el));
+
+    });
 
     // Key cards animation
     const keyCards = document.querySelectorAll('[data-key-card]');
@@ -709,7 +978,7 @@
         if (entry.isIntersecting) {
           const counter = entry.target;
           const target = parseInt(counter.getAttribute('data-target'));
-          const duration = 1600;
+          const duration = 800;
           const startTime = performance.now();
 
           // Also make parent .metric-value visible
@@ -737,7 +1006,9 @@
         }
       });
     }, { threshold: 0, rootMargin: '0px 0px 50px 0px' });
-    counters.forEach(c => counterObserver.observe(c));
+    document.addEventListener('loaderFinished', () => {
+      counters.forEach(c => counterObserver.observe(c));
+    });
 
     // Portfolio slider with drag and arrows
     const slider = document.getElementById('portfolioSlider');
@@ -804,7 +1075,7 @@
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
         e.preventDefault();
@@ -817,14 +1088,14 @@
       });
     });
   </script>
-  
+
   <!-- Smooth Scrolling (Lenis) -->
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   <script>
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      direction: 'vertical', 
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
       mouseMultiplier: 1,
@@ -841,5 +1112,34 @@
     requestAnimationFrame(raf)
   </script>
   <script src="404-redirect.js"></script>
+
+  <!-- Scroll Animation Fallback Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if browser natively supports scroll-driven animations
+      if (CSS.supports('animation-timeline', 'view()')) {
+        return; // Let native CSS handle it flawlessly
+      }
+
+      const rows = document.querySelectorAll('.service-row');
+
+      const updateScroll = () => {
+        const windowHeight = window.innerHeight;
+        rows.forEach(row => {
+          const rect = row.getBoundingClientRect();
+          // Calculate progress from 0 (entering bottom) to 1 (reached middle)
+          let progress = 1 - ((rect.top - windowHeight * 0.6) / (windowHeight * 0.4));
+          progress = Math.max(0, Math.min(1, progress));
+          row.style.setProperty('--scroll-progress', progress);
+        });
+        requestAnimationFrame(updateScroll);
+      };
+
+      // Start loop
+      requestAnimationFrame(updateScroll);
+    });
+  </script>
+  
 </body>
+
 </html>
