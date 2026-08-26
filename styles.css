@@ -671,6 +671,10 @@ body:has(.mobile-menu.open) .navbar-logo {
     gap: 40px;
 }
 
+.hero-content-center-override {
+    padding-top: 0 !important;
+}
+
 .hero-left {
     max-width: 820px;
 }
@@ -2094,6 +2098,10 @@ body:has(.mobile-menu.open) .navbar-logo {
         text-align: center;
         padding: 120px 20px 40px;
         gap: 30px;
+    }
+    
+    .hero-content-center-override {
+        padding-top: 120px !important;
     }
 
     .hero-right-container {
