@@ -2538,11 +2538,16 @@ body:has(.mobile-menu.open) .navbar-logo {
         padding: 100px 20px 40px;
         border-radius: 40px 40px 0 0;
         height: auto;
+        display: block; /* Fix flex min-width overflow */
     }
     .contact-section-inner {
         grid-template-columns: 1fr;
         gap: 40px;
         min-height: unset;
+        min-width: 0;
+    }
+    .contact-poster, .contact-form-container {
+        min-width: 0; /* Prevent grid items from stretching past viewport */
     }
     .contact-poster {
         height: 400px;
@@ -2644,6 +2649,59 @@ body:has(.mobile-menu.open) .navbar-logo {
     }
     .service-content h2 {
         font-size: 2rem;
+    }
+}
+/* ==========================================================================
+   CONTACT OPTIMIZATIONS (<600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .section-contact-split {
+        padding: 80px 16px 30px;
+        border-radius: 30px 30px 0 0;
+    }
+    .contact-poster {
+        height: 320px;
+        border-radius: 24px;
+    }
+    .contact-poster-title h1 {
+        font-size: 2.5rem !important;
+    }
+    .contact-info-card {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        padding: 16px;
+        border-radius: 16px;
+        gap: 12px;
+    }
+    .contact-info-link, .contact-info-text {
+        font-size: 0.9rem;
+        gap: 12px;
+        word-break: break-word;
+    }
+    .contact-info-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+    .contact-info-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .contact-form-container {
+        padding: 24px 16px;
+        border-radius: 24px;
+    }
+    .contact-form-row {
+        gap: 20px;
+    }
+    #domainPickerWrapper {
+        min-width: 100px !important;
+    }
+    #btnSendOtp {
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+        margin-left: 6px !important;
     }
 }
 
