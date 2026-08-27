@@ -174,33 +174,24 @@
       <div id="top">
 
         <!-- ===== NEW CONTACT LAYOUT ===== -->
-        <section class="section-contact-split"
-          style="padding: 120px 40px; background: #ffffff; min-height: 100vh; display: flex; align-items: center; max-width: 1600px; margin: 0 auto; border-radius: 60px 60px 0 0; overflow: hidden;">
-          <div class="contact-grid"
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%; height: calc(100vh - 160px); min-height: 700px;">
-
+        <section class="section-contact-split">
+          <div class="contact-section-inner">
+            
             <!-- Left Image Poster -->
-            <div class="contact-poster"
-              style="position: relative; border-radius: 32px; overflow: hidden; height: 100%;">
+            <div class="contact-poster">
               <!-- Handshake image -->
-              <img src="images/vXr_hand.webp" alt="Handshake"
-                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);"
-                onerror="this.src='images/about-image.webp'" / width="400" height="400" loading="lazy">
+              <img src="images/vXr_hand.webp" alt="Handshake" class="contact-poster-img"
+                onerror="this.src='images/about-image.webp'" width="400" height="400" loading="lazy">
 
               <!-- Overlay Text -->
-              <div style="position: absolute; top: 60px; left: 0; right: 0; text-align: center; z-index: 2;">
-                <h1
-                  style="color: #ffffff; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 500; letter-spacing: -0.02em; margin: 0;">
-                  Get in Touch</h1>
+              <div class="contact-poster-title">
+                <h1>Get in Touch</h1>
               </div>
 
               <!-- Glass Info Card -->
-              <div
-                style="position: absolute; bottom: 40px; left: 40px; right: 40px; background: rgba(20,20,20,0.6); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 32px 40px; display: flex; flex-direction: column; gap: 24px; z-index: 2;">
-                <a href="mailto:info@vxrholdings.com"
-                  style="display: flex; align-items: center; gap: 16px; color: #ffffff; text-decoration: none; font-size: 1.1rem; font-weight: 500;">
-                  <div
-                    style="width: 48px; height: 48px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; color: #1a1a1a;">
+              <div class="contact-info-card">
+                <a href="mailto:info@vxrholdings.com" class="contact-info-link">
+                  <div class="contact-info-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
@@ -212,10 +203,8 @@
                   </div>
                   info@vxrholdings.com
                 </a>
-                <div
-                  style="display: flex; align-items: center; gap: 16px; color: #ffffff; font-size: 1.1rem; font-weight: 500;">
-                  <div
-                    style="width: 48px; height: 48px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; color: #1a1a1a;">
+                <div class="contact-info-text">
+                  <div class="contact-info-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
@@ -229,22 +218,20 @@
             </div>
 
             <!-- Right Form Container -->
-            <div class="contact-form-container"
-              style="background: #FAFAFA; border-radius: 32px; padding: 60px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+            <div class="contact-form-container">
               
               <!-- reCAPTCHA API Script -->
               <script src="https://www.google.com/recaptcha/api.js" async defer></script>
               
-              <form id="contactForm" class="contact-form"
-                style="display: flex; flex-direction: column; gap: 40px; height: 100%; justify-content: space-between;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-                  <div style="display: flex; flex-direction: column; height: 100%;">
+              <form id="contactForm" class="contact-form">
+                <div class="contact-form-row">
+                  <div class="contact-form-group">
                     <label for="name"
                       style="font-weight: 500; color: #333; font-size: 1rem; margin-bottom: 16px;">Name</label>
                     <input type="text" id="name" required placeholder="Full name"
                       style="margin-top: auto; padding-bottom: 12px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111;" />
                   </div>
-                  <div style="display: flex; flex-direction: column; position: relative; height: 100%;">
+                  <div class="contact-form-group">
                     <label style="font-weight: 500; color: #333; font-size: 1rem; margin-bottom: 16px;">Email</label>
 
                     <!-- Hidden combined email input used for OTP validation -->
@@ -329,14 +316,14 @@
                   </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-                  <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="contact-form-row">
+                  <div class="contact-form-group">
                     <label for="phone"
                       style="font-weight: 500; color: #333; font-size: 1rem;">Phone</label>
                     <input type="tel" id="phone" required placeholder="+91 12345 67890"
                       style="padding-bottom: 12px; border: none; border-bottom: 1px solid #ddd; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; transition: border-color 0.3s; color: #111;" />
                   </div>
-                  <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div class="contact-form-group">
                     <label for="company"
                       style="font-weight: 500; color: #333; font-size: 1rem;">Company</label>
                     <input type="text" id="company" placeholder="Company / Business name (Optional)"
