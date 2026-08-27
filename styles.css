@@ -935,7 +935,7 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 28px;
-    padding: 40px 48px;
+    padding: 32px 36px;
     color: var(--color-white);
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.4),
@@ -961,14 +961,14 @@ body:has(.mobile-menu.open) .mobile-close:hover {
 
 .family-funds-grid {
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .fund-item {}
 
 .fund-value {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
     font-weight: 700;
     display: flex;
     align-items: baseline;
