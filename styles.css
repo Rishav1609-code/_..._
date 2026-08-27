@@ -2695,13 +2695,17 @@ body:has(.mobile-menu.open) .navbar-logo {
     .contact-form-row {
         gap: 20px;
     }
+    .email-input-row {
+        flex-wrap: wrap;
+    }
     #domainPickerWrapper {
         min-width: 100px !important;
     }
     #btnSendOtp {
         padding: 8px 12px !important;
         font-size: 0.75rem !important;
-        margin-left: 6px !important;
+        margin-left: 0 !important;
+        margin-top: 8px !important;
     }
 }
 
