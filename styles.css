@@ -2643,9 +2643,19 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     }
     
     /* Collapse grids to 1 column */
-    .metrics-grid, .footer-grid, .pf-cards-grid, .contact-grid {
+    .metrics-grid, .pf-cards-grid, .contact-grid {
         grid-template-columns: 1fr !important;
         gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 32px 20px !important;
+    }
+    
+    .footer-grid > div:first-child,
+    .footer-grid > div:last-child {
+        grid-column: 1 / -1;
     }
     
     .portfolio-card {
