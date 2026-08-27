@@ -1984,9 +1984,23 @@ body:has(.mobile-menu.open) .mobile-close:hover {
 .footer-socials {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 32px;
+}
+
+@media (min-width: 769px) {
+    .footer .container {
+        position: relative;
+    }
+    .footer-socials {
+        position: absolute;
+        bottom: 38px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+    }
 }
 
 .footer-socials .social-icon {
