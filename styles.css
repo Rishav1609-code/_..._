@@ -2679,7 +2679,17 @@ body:has(.mobile-menu.open) .mobile-close:hover {
 
     /* Miscellaneous Fixes */
     .family-left {
-        min-height: 300px;
+        min-height: 420px;
+    }
+    .family-funds {
+        padding: 24px;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+    .family-funds-grid {
+        flex-direction: column;
+        gap: 16px;
     }
     .footer-bottom {
         flex-direction: column;
