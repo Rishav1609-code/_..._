@@ -2860,9 +2860,9 @@ body:has(.mobile-menu.open) .mobile-close:hover {
         border-radius: 20px;
     }
     .team-photo {
+        width: 220px;
+        height: 270px;
         max-width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
     }
     .service-content h2 {
         font-size: 2rem;
