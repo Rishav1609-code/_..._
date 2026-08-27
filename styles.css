@@ -1195,7 +1195,18 @@ body:has(.mobile-menu.open) .mobile-close:hover {
 }
 
 @media (max-width: 600px) {
-    .ecosystem-bento { grid-template-columns: repeat(2, 1fr); }
+    .ecosystem-bento { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+    }
+    .eco-card {
+        padding: 16px 12px;
+        min-height: 100px;
+        gap: 8px;
+    }
+    .eco-card--large img { height: 90px; }
+    .eco-card--medium img { height: 80px; }
+    .eco-card:nth-child(n+3) img { height: 50px; }
 }
 
 .ticker-wrapper {
@@ -2632,7 +2643,7 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     }
     
     /* Collapse grids to 1 column */
-    .metrics-grid, .footer-grid, .pf-cards-grid, .contact-grid, .ecosystem-bento {
+    .metrics-grid, .footer-grid, .pf-cards-grid, .contact-grid {
         grid-template-columns: 1fr !important;
         gap: 20px;
     }
