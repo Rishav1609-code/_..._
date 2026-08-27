@@ -2661,6 +2661,13 @@ body:has(.mobile-menu.open) .mobile-close:hover {
         grid-template-columns: 1fr !important;
         gap: 20px;
     }
+    
+    .metric-value {
+        justify-content: center;
+    }
+    .metric-item {
+        text-align: center;
+    }
 
     .footer-grid {
         grid-template-columns: 1fr 1fr !important;
