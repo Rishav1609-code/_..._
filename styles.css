@@ -485,15 +485,23 @@ p {
     font-size: 0.875rem;
 }
 
-/* Mobile menu */
-.mobile-menu-toggle {
+.mobile-toggles {
     display: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+}
+
+.mobile-menu-toggle {
     background: none;
     border: none;
     color: var(--color-cream);
     cursor: pointer;
-    width: 28px;
-    height: 28px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: rotate(0deg) scale(1);
     z-index: 2000;
@@ -554,25 +562,32 @@ body:has(.mobile-menu.open) .navbar {
 }
 
 .mobile-close {
-    position: fixed;
-    top: 58px;
-    right: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: none;
     border: none;
     color: var(--color-cream);
     cursor: pointer;
-    width: 28px;
-    height: 28px;
+    width: 100%;
+    height: 100%;
     z-index: 2001;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: rotate(-90deg) scale(0.5);
+    pointer-events: none;
+    opacity: 0;
 }
 
-.mobile-menu.open .mobile-close {
+.mobile-menu.open ~ .navbar .mobile-close, 
+body:has(.mobile-menu.open) .mobile-close {
     transform: rotate(0deg) scale(1);
+    pointer-events: all;
+    opacity: 1;
 }
 
-.mobile-menu.open .mobile-close:hover {
+
+
+body:has(.mobile-menu.open) .mobile-close:hover {
     transform: rotate(90deg) scale(1.1);
     color: var(--color-sand);
 }
@@ -2598,8 +2613,8 @@ body:has(.mobile-menu.open) .navbar {
     .navbar-links, .nav-cta {
         display: none;
     }
-    .mobile-menu-toggle {
-        display: flex;
+    .mobile-toggles {
+        display: block;
     }
     .mobile-menu {
         display: block;
