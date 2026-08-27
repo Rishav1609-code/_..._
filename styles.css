@@ -2165,6 +2165,154 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     margin: 0;
 }
 
+/* ===== VISION & PHILOSOPHY (ABOUT PAGE) ===== */
+.section-vision {
+    padding: 120px 0;
+    position: relative;
+    background: var(--color-cream);
+}
+
+.vision-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+    align-items: start;
+}
+
+.vision-title-col h2 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    color: var(--color-brown);
+    margin-bottom: 30px;
+}
+
+.vision-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--color-brown);
+    border-radius: 2px;
+}
+
+.vision-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vision-text-col .lead-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.vision-text-col p:not(.lead-text) {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.vision-bento-section {
+    margin-bottom: 120px;
+}
+
+.bento-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-brown);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bento-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.vision-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.vision-card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--color-brown);
+    color: var(--color-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.card-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.vision-card h4 {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-bottom: 16px;
+}
+
+.vision-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.vision-conclusion {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px;
+    background: linear-gradient(145deg, var(--color-brown) 0%, #30221a 100%);
+    border-radius: 40px;
+    color: var(--color-cream);
+    box-shadow: 0 30px 60px rgba(78, 57, 46, 0.3);
+}
+
+.vision-conclusion h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 30px;
+}
+
+.vision-conclusion p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(245, 243, 238, 0.85);
+    margin-bottom: 20px;
+}
+
+.vision-conclusion .highlight-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-top: 30px;
+}
+
 /* ===== STANDARDS SECTION (PRO MAX) ===== */
 .section-standards {
     padding: 60px 0 120px 0;
@@ -2564,10 +2712,10 @@ body:has(.mobile-menu.open) .mobile-close:hover {
         margin-bottom: 24px;
         flex: unset;
     }
-    .key-cards, .team-grid, .methodology-grid, .standards-grid {
+    .key-cards, .team-grid, .methodology-grid, .standards-grid, .vision-intro, .vision-bento-grid {
         grid-template-columns: 1fr;
-    }
-    .footer-grid, .metrics-grid, .pf-cards-grid, .ecosystem-bento {
+        gap: 40px;
+    }.footer-grid, .metrics-grid, .pf-cards-grid, .ecosystem-bento {
         grid-template-columns: repeat(2, 1fr) !important;
     }
     
@@ -2652,7 +2800,7 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     /* Force smaller paddings on all major sections */
     .section-hero { min-height: 100vh; }
     .section-sub-hero { min-height: 100vh; }
-    .section-family, .section-methodology, .section-portfolio, .section-team, .section-cta, .section-key, .section-service-showcase {
+    .section-family, .section-methodology, .section-vision, .section-portfolio, .section-team, .section-cta, .section-key, .section-service-showcase {
         padding: 60px 0 !important;
     }
     
@@ -2706,6 +2854,10 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     .footer-socials {
         justify-content: center;
         padding-top: 20px;
+    }
+    .vision-conclusion {
+        padding: 40px 20px;
+        border-radius: 20px;
     }
     .team-photo {
         max-width: 100%;
