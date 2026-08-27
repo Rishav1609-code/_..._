@@ -490,12 +490,13 @@ p {
     display: none;
     background: none;
     border: none;
-    color: var(--color-white);
+    color: var(--color-cream);
     cursor: pointer;
     width: 28px;
     height: 28px;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: rotate(0deg) scale(1);
+    z-index: 2000;
 }
 
 body:has(.mobile-menu.open) .mobile-menu-toggle {
@@ -505,11 +506,7 @@ body:has(.mobile-menu.open) .mobile-menu-toggle {
 }
 
 body:has(.mobile-menu.open) .navbar {
-    pointer-events: none;
-}
-
-body:has(.mobile-menu.open) .navbar-logo {
-    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .mobile-menu {
@@ -557,15 +554,16 @@ body:has(.mobile-menu.open) .navbar-logo {
 }
 
 .mobile-close {
-    position: absolute;
-    top: 68px;
-    right: 59px;
+    position: fixed;
+    top: 58px;
+    right: 44px;
     background: none;
     border: none;
-    color: var(--color-white);
+    color: var(--color-cream);
     cursor: pointer;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
+    z-index: 2001;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: rotate(-90deg) scale(0.5);
 }
