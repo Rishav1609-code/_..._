@@ -2736,7 +2736,8 @@ body:has(.mobile-menu.open) .mobile-close:hover {
         justify-content: center;
     }
     .hero-stat-value {
-        font-size: 3rem;
+        font-size: clamp(1.5rem, 11vw, 3rem);
+        white-space: nowrap;
     }
 }
 
