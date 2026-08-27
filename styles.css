@@ -2695,6 +2695,9 @@ body:has(.mobile-menu.open) .navbar-logo {
     .contact-form-row {
         gap: 20px;
     }
+    .company-input {
+        height: 56px !important; /* Forces 2 lines to be visible */
+    }
     .email-input-row {
         flex-wrap: wrap;
     }
