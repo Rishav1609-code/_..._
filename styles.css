@@ -1706,6 +1706,14 @@ body:has(.mobile-menu.open) .mobile-close:hover {
     gap: 32px;
 }
 
+@media (min-width: 769px) {
+    .team-grid .team-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 16px);
+    }
+}
+
 .team-card {
     /* Glassmorphism base */
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%);
